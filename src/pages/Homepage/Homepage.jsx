@@ -34,9 +34,9 @@ import {
 function Homepage() {
     return <div>
     <main>
-    <h1 class="hero-txt">Purr-fect for your paws,<br/>
+    <h1 className="hero-txt">Purr-fect for your paws,<br/>
             Every Pet's Essential<br/>
-            with <a href="/"><span class="span-imp">Urban Tails</span></a></h1>
+            with <a href="/"><span className="span-imp">Urban Tails</span></a></h1>
 
         <img className="hero-image" src={heroPets} alt="hero image"/>
 
