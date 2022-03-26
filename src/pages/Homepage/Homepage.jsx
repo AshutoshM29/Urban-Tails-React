@@ -32,7 +32,7 @@ import {
 
 
 function Homepage() {
-    return <div>
+    return ( <div>
     <main>
     <h1 className="hero-txt">Purr-fect for your paws,<br/>
             Every Pet's Essential<br/>
@@ -191,7 +191,7 @@ function Homepage() {
         </div>
 
     </main>
-    </div>
+    </div>)
   }
   
   export {Homepage}
