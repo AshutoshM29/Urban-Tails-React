@@ -7,9 +7,7 @@ import Mockman from "mockman-js";
 function App() {
   return (
     <div className="App">
-      <div>
       <Navigation />
-      </div>
       <div className="main-style">
       <Routes>
         <Route path="/" element={<Homepage/>}></Route>
