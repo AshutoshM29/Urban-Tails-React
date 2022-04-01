@@ -16,8 +16,8 @@ return (
   <Filter />
   <div class="section-card">
     <div class="container-card-head">
-      <a class="path" href="/index.html">Home > </a>
-      <a class="path" href="/Pages/Dog-Products/treat.html">Dog Treats</a>
+      <Link class="path" to="/Homepage">Home > </Link>
+      <Link class="path" to="/Product">Dog Treats</Link>
       <h2>Dog Treats</h2>
     </div>
     <div class="container-card">
