@@ -1,0 +1,131 @@
+body {
+    min-height: auto;
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+}
+
+.main-section {
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+hr {
+    width: 50%;
+}
+
+.section-filter {
+    width: 30vw;
+    border-right: 0.2rem solid var(--pink-nav);
+    position: sticky;
+    top: 20vh;
+    left: 0;
+    height: 100%;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.section-filter div {
+    display: flex;
+    align-items: center;
+}
+
+.header-filter {
+    color: var(--gray-mild);
+}
+
+.sub-header-filter {
+    color: var(--gray-mild);
+    font-weight: 800;
+}
+
+.filters-applied {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 1.5rem;
+}
+
+.slider {
+    background-color: var(--gray-mild);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    height: 1.1rem;
+    width: 1.1rem;
+    left: 0.3rem;
+    bottom: 0.2rem;
+    background-color: var(--white);
+    transition: 0.4s cubic-bezier(0.5, 0.5, 0.5, 1);
+}
+
+input:checked+.slider {
+    background-color: var(--pink-nav);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 0.2rem var(--gray-mild);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(1rem);
+    -ms-transform: translateX(1.3rem);
+    transform: translateX(1.3rem);
+}
+
+.slider-custom {
+    -webkit-appearance: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.slider-custom:focus {
+    outline: none;
+}
+
+.slider-custom::-webkit-slider-runnable-track {
+    background: var(--pink-nav);
+    height: 0.2rem;
+}
+
+.price-range {
+    display: flex;
+    justify-content: space-between;
+    color: var(--gray-mild);
+}
+
+.checkbox {
+    color: var(--gray-dominant);
+    padding: 0.2rem;
+}
+
+.radio {
+    color: var(--gray-dominant);
+    padding: 0.2rem;
+}
+
+.input-desc {
+    padding: 0 1rem;
+}
+
+.slider-custom::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: var(--white);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 0.2rem solid var(--pink-nav);
+    margin-top: -0.70rem;
+}
