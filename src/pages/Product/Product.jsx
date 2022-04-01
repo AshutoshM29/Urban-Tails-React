@@ -1,6 +1,14 @@
 import { Filter } from "../../components/Filter/Filter"
 import '../Product/product.css'
 import { Link } from 'react-router-dom'
+import {
+  boneChew,
+  dentastix,
+  duoStick,
+  mini,
+  sara,
+  yummy,
+} from '../../assets/images'
 
 function Product() {
 return (
@@ -8,7 +16,7 @@ return (
   <Filter />
   <div class="section-card">
     <div class="container-card-head">
-      <a class="path" href="/index.html">Home </a>
+      <a class="path" href="/index.html">Home > </a>
       <a class="path" href="/Pages/Dog-Products/treat.html">Dog Treats</a>
       <h2>Dog Treats</h2>
     </div>
@@ -19,7 +27,7 @@ return (
           <button class="btn-wishlist">
             <i class="fas fa-heart"></i>
           </button>
-          <img class="card-vertical-img" src="/Assets/Dogs/Products/bone-chew.webp" alt="t-shirt jpg" />
+          <img class="card-vertical-img" src={boneChew} alt="t-shirt jpg" />
         </div>
         <h1 class="card-head">Dogsee Chew</h1>
         <p class="card-text">
@@ -29,7 +37,7 @@ return (
           <small class="rating-oa">4.0 <i class="fas fa-star"></i></small>
           <p class="body-cp-xsm">8.6K reviews</p>
         </div>
-        <div class="price-section">
+        <div class="section-price">
           <span class="price">₹450</span>
           <span class="initial-price">₹2500</span>
           <span class="discount">(82%)</span>
@@ -49,7 +57,7 @@ return (
           <button class="btn-wishlist">
             <i class="fas fa-heart"></i>
           </button>
-          <img class="card-vertical-img" src="/Assets/Dogs/Products/yummy.webp" alt="t-shirt jpg" />
+          <img class="card-vertical-img" src={yummy} alt="t-shirt jpg" />
         </div>
         <h1 class="card-head">Apple & Banana Biscuits</h1>
         <p class="card-text">Made with real Apples & Bananas, free of Gluten & Artificial Flavours. Suitable
@@ -78,7 +86,7 @@ return (
           <button class="btn-wishlist">
             <i class="fas fa-heart"></i>
           </button>
-          <img class="card-vertical-img" src="/Assets/Dogs/Products/duo-stick.webp" alt="t-shirt jpg" />
+          <img class="card-vertical-img" src={dentastix} alt="t-shirt jpg" />
         </div>
         <h1 class="card-head">Duo Stick</h1>
         <p class="card-text">
@@ -107,7 +115,7 @@ return (
           <button class="btn-wishlist">
             <i class="fas fa-heart"></i>
           </button>
-          <img class="card-vertical-img" src="/Assets/Dogs/Products/mini.webp" alt="t-shirt jpg" />
+          <img class="card-vertical-img" src={mini} alt="t-shirt jpg" />
         </div>
         <h1 class="card-head">T-Shirt Combo</h1>
         <p class="card-text">
@@ -136,7 +144,7 @@ return (
           <button class="btn-wishlist">
             <i class="fas fa-heart"></i>
           </button>
-          <img class="card-vertical-img" src="/Assets/Dogs/Products/sara.webp" alt="t-shirt jpg" />
+          <img class="card-vertical-img" src={sara} alt="t-shirt jpg" />
         </div>
         <h1 class="card-head">T-Shirt Combo</h1>
         <p class="card-text">
@@ -165,7 +173,7 @@ return (
           <button class="btn-wishlist">
             <i class="fas fa-heart"></i>
           </button>
-          <img class="card-vertical-img" src="/Assets/Dogs/Products/dentastix.webp" alt="t-shirt jpg" />
+          <img class="card-vertical-img" src={duoStick} alt="t-shirt jpg" />
         </div>
         <h1 class="card-head">T-Shirt Combo</h1>
         <p class="card-text">
