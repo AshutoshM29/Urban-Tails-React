@@ -1,4 +1,4 @@
-import { Filter } from "../../components/Filter/Filter"
+import { Sidebar } from "../../components/Sidebar/Sidebar"
 import '../Product/product.css'
 import { Link } from 'react-router-dom'
 import {
@@ -13,186 +13,186 @@ import {
 function Product() {
 return (
 <main className="main-product">
-  <Filter />
-  <div class="section-card">
-    <div class="container-card-head">
-      <Link class="path" to="/Homepage">Home > </Link>
-      <Link class="path" to="/Product">Dog Treats</Link>
+  <Sidebar />
+  <div className="section-card">
+    <div className="container-card-head">
+      <Link className="path" to="/Homepage">Home > </Link>
+      <Link className="path" to="/Product">Dog Treats</Link>
       <h2>Dog Treats</h2>
     </div>
-    <div class="container-card">
-      <div class="card card-vertical">
-        <div class="img-content">
-          <p class="text-badge">Trending</p>
-          <button class="btn-wishlist">
-            <i class="fas fa-heart"></i>
+    <div className="container-card">
+      <div className="card card-vertical">
+        <div className="img-content">
+          <p className="text-badge">Trending</p>
+          <button className="btn-wishlist">
+            <i className="fas fa-heart"></i>
           </button>
-          <img class="card-vertical-img" src={boneChew} alt="t-shirt jpg" />
+          <img className="card-vertical-img" src={boneChew} alt="t-shirt jpg" />
         </div>
-        <h1 class="card-head">Dogsee Chew</h1>
-        <p class="card-text">
+        <h1 className="card-head">Dogsee Chew</h1>
+        <p className="card-text">
           The perfect long-lasting dog chew sticks for puppies and small breed fluffies!
         </p>
-        <div class="section-review">
-          <small class="rating-oa">4.0 <i class="fas fa-star"></i></small>
-          <p class="body-cp-xsm">8.6K reviews</p>
+        <div className="section-review">
+          <small className="rating-oa">4.0 <i className="fas fa-star"></i></small>
+          <p className="body-cp-xsm">8.6K reviews</p>
         </div>
-        <div class="section-price">
-          <span class="price">₹450</span>
-          <span class="initial-price">₹2500</span>
-          <span class="discount">(82%)</span>
+        <div className="section-price">
+          <span className="price">₹450</span>
+          <span className="initial-price">₹2500</span>
+          <span className="discount">(82%)</span>
         </div>
 
-        <button class="btn btn-primary-outline">
-          <i class="fas fa-shopping-bag"></i> Add to Bag
+        <button className="btn btn-primary-outline">
+          <i className="fas fa-shopping-bag"></i> Add to Bag
         </button>
-        <button class="btn btn-primary-solid">
-          <i class="fas fa-bolt"></i> Buy Now
+        <button className="btn btn-primary-solid">
+          <i className="fas fa-bolt"></i> Buy Now
         </button>
       </div>
 
-      <div class="card card-vertical">
-        <div class="img-content">
-          <p class="text-badge">Best Seller</p>
-          <button class="btn-wishlist">
-            <i class="fas fa-heart"></i>
+      <div className="card card-vertical">
+        <div className="img-content">
+          <p className="text-badge">Best Seller</p>
+          <button className="btn-wishlist">
+            <i className="fas fa-heart"></i>
           </button>
-          <img class="card-vertical-img" src={yummy} alt="t-shirt jpg" />
+          <img className="card-vertical-img" src={yummy} alt="t-shirt jpg" />
         </div>
-        <h1 class="card-head">Apple & Banana Biscuits</h1>
-        <p class="card-text">Made with real Apples & Bananas, free of Gluten & Artificial Flavours. Suitable
+        <h1 className="card-head">Apple & Banana Biscuits</h1>
+        <p className="card-text">Made with real Apples & Bananas, free of Gluten & Artificial Flavours. Suitable
           for all Dogs
         </p>
-        <div class="section-review">
-          <small class="rating-oa">4.2 <i class="fas fa-star"></i></small>
-          <p class="body-cp-xsm">6.2K reviews</p>
+        <div className="section-review">
+          <small className="rating-oa">4.2 <i className="fas fa-star"></i></small>
+          <p className="body-cp-xsm">6.2K reviews</p>
         </div>
-        <div class="price-section">
-          <span class="price">₹450</span>
-          <span class="initial-price">₹2500</span>
-          <span class="discount">(82%)</span>
+        <div className="price-section">
+          <span className="price">₹450</span>
+          <span className="initial-price">₹2500</span>
+          <span className="discount">(82%)</span>
         </div>
-        <button class="btn btn-primary-outline">
-          <i class="fas fa-shopping-bag"></i> Add to Bag
+        <button className="btn btn-primary-outline">
+          <i className="fas fa-shopping-bag"></i> Add to Bag
         </button>
-        <button class="btn btn-primary-solid">
-          <i class="fas fa-bolt"></i> Buy Now
-        </button>
-      </div>
-
-      <div class="card card-vertical">
-        <div class="img-content">
-          <p class="text-badge">Few Left</p>
-          <button class="btn-wishlist">
-            <i class="fas fa-heart"></i>
-          </button>
-          <img class="card-vertical-img" src={dentastix} alt="t-shirt jpg" />
-        </div>
-        <h1 class="card-head">Duo Stick</h1>
-        <p class="card-text">
-          T-shirts for men feature three main neck styles: the round neck, the V-neck and the polo neck.
-        </p>
-        <div class="section-review">
-          <small class="rating-oa">4.6 <i class="fas fa-star"></i></small>
-          <p class="body-cp-xsm">12.3K reviews</p>
-        </div>
-        <div class="price-section">
-          <span class="price">₹450</span>
-          <span class="initial-price">₹2500</span>
-          <span class="discount">(82%)</span>
-        </div>
-        <button class="btn btn-primary-outline">
-          <i class="fas fa-shopping-bag"></i> Add to Bag
-        </button>
-        <button class="btn btn-primary-solid">
-          <i class="fas fa-bolt"></i> Buy Now
+        <button className="btn btn-primary-solid">
+          <i className="fas fa-bolt"></i> Buy Now
         </button>
       </div>
 
-      <div class="card card-vertical">
-        <div class="img-content">
-          <p class="text-badge">Trending</p>
-          <button class="btn-wishlist">
-            <i class="fas fa-heart"></i>
+      <div className="card card-vertical">
+        <div className="img-content">
+          <p className="text-badge">Few Left</p>
+          <button className="btn-wishlist">
+            <i className="fas fa-heart"></i>
           </button>
-          <img class="card-vertical-img" src={mini} alt="t-shirt jpg" />
+          <img className="card-vertical-img" src={dentastix} alt="t-shirt jpg" />
         </div>
-        <h1 class="card-head">T-Shirt Combo</h1>
-        <p class="card-text">
+        <h1 className="card-head">Duo Stick</h1>
+        <p className="card-text">
           T-shirts for men feature three main neck styles: the round neck, the V-neck and the polo neck.
         </p>
-        <div class="section-review">
-          <small class="rating-oa">4.0 <i class="fas fa-star"></i></small>
-          <p class="body-cp-xsm">8.6K reviews</p>
+        <div className="section-review">
+          <small className="rating-oa">4.6 <i className="fas fa-star"></i></small>
+          <p className="body-cp-xsm">12.3K reviews</p>
         </div>
-        <div class="price-section">
-          <span class="price">₹450</span>
-          <span class="initial-price">₹2500</span>
-          <span class="discount">(82%)</span>
+        <div className="price-section">
+          <span className="price">₹450</span>
+          <span className="initial-price">₹2500</span>
+          <span className="discount">(82%)</span>
         </div>
-        <button class="btn btn-primary-outline">
-          <i class="fas fa-shopping-bag"></i> Add to Bag
+        <button className="btn btn-primary-outline">
+          <i className="fas fa-shopping-bag"></i> Add to Bag
         </button>
-        <button class="btn btn-primary-solid">
-          <i class="fas fa-bolt"></i> Buy Now
+        <button className="btn btn-primary-solid">
+          <i className="fas fa-bolt"></i> Buy Now
         </button>
       </div>
 
-      <div class="card card-vertical">
-        <div class="img-content">
-          <p class="text-badge">Trending</p>
-          <button class="btn-wishlist">
-            <i class="fas fa-heart"></i>
+      <div className="card card-vertical">
+        <div className="img-content">
+          <p className="text-badge">Trending</p>
+          <button className="btn-wishlist">
+            <i className="fas fa-heart"></i>
           </button>
-          <img class="card-vertical-img" src={sara} alt="t-shirt jpg" />
+          <img className="card-vertical-img" src={mini} alt="t-shirt jpg" />
         </div>
-        <h1 class="card-head">T-Shirt Combo</h1>
-        <p class="card-text">
+        <h1 className="card-head">T-Shirt Combo</h1>
+        <p className="card-text">
           T-shirts for men feature three main neck styles: the round neck, the V-neck and the polo neck.
         </p>
-        <div class="section-review">
-          <small class="rating-oa">4.0 <i class="fas fa-star"></i></small>
-          <p class="body-cp-xsm">8.6K reviews</p>
+        <div className="section-review">
+          <small className="rating-oa">4.0 <i className="fas fa-star"></i></small>
+          <p className="body-cp-xsm">8.6K reviews</p>
         </div>
-        <div class="price-section">
-          <span class="price">₹450</span>
-          <span class="initial-price">₹2500</span>
-          <span class="discount">(82%)</span>
+        <div className="price-section">
+          <span className="price">₹450</span>
+          <span className="initial-price">₹2500</span>
+          <span className="discount">(82%)</span>
         </div>
-        <button class="btn btn-primary-outline">
-          <i class="fas fa-shopping-bag"></i> Add to Bag
+        <button className="btn btn-primary-outline">
+          <i className="fas fa-shopping-bag"></i> Add to Bag
         </button>
-        <button class="btn btn-primary-solid">
-          <i class="fas fa-bolt"></i> Buy Now
+        <button className="btn btn-primary-solid">
+          <i className="fas fa-bolt"></i> Buy Now
         </button>
       </div>
 
-      <div class="card card-vertical">
-        <div class="img-content">
-          <p class="text-badge">Trending</p>
-          <button class="btn-wishlist">
-            <i class="fas fa-heart"></i>
+      <div className="card card-vertical">
+        <div className="img-content">
+          <p className="text-badge">Trending</p>
+          <button className="btn-wishlist">
+            <i className="fas fa-heart"></i>
           </button>
-          <img class="card-vertical-img" src={duoStick} alt="t-shirt jpg" />
+          <img className="card-vertical-img" src={sara} alt="t-shirt jpg" />
         </div>
-        <h1 class="card-head">T-Shirt Combo</h1>
-        <p class="card-text">
+        <h1 className="card-head">T-Shirt Combo</h1>
+        <p className="card-text">
           T-shirts for men feature three main neck styles: the round neck, the V-neck and the polo neck.
         </p>
-        <div class="section-review">
-          <small class="rating-oa">4.0 <i class="fas fa-star"></i></small>
-          <p class="body-cp-xsm">8.6K reviews</p>
+        <div className="section-review">
+          <small className="rating-oa">4.0 <i className="fas fa-star"></i></small>
+          <p className="body-cp-xsm">8.6K reviews</p>
         </div>
-        <div class="price-section">
-          <span class="price">₹450</span>
-          <span class="initial-price">₹2500</span>
-          <span class="discount">(82%)</span>
+        <div className="price-section">
+          <span className="price">₹450</span>
+          <span className="initial-price">₹2500</span>
+          <span className="discount">(82%)</span>
         </div>
-        <button class="btn btn-primary-outline">
-          <i class="fas fa-shopping-bag"></i> Add to Bag
+        <button className="btn btn-primary-outline">
+          <i className="fas fa-shopping-bag"></i> Add to Bag
         </button>
-        <button class="btn btn-primary-solid">
-          <i class="fas fa-bolt"></i> Buy Now
+        <button className="btn btn-primary-solid">
+          <i className="fas fa-bolt"></i> Buy Now
+        </button>
+      </div>
+
+      <div className="card card-vertical">
+        <div className="img-content">
+          <p className="text-badge">Trending</p>
+          <button className="btn-wishlist">
+            <i className="fas fa-heart"></i>
+          </button>
+          <img className="card-vertical-img" src={duoStick} alt="t-shirt jpg" />
+        </div>
+        <h1 className="card-head">T-Shirt Combo</h1>
+        <p className="card-text">
+          T-shirts for men feature three main neck styles: the round neck, the V-neck and the polo neck.
+        </p>
+        <div className="section-review">
+          <small className="rating-oa">4.0 <i className="fas fa-star"></i></small>
+          <p className="body-cp-xsm">8.6K reviews</p>
+        </div>
+        <div className="price-section">
+          <span className="price">₹450</span>
+          <span className="initial-price">₹2500</span>
+          <span className="discount">(82%)</span>
+        </div>
+        <button className="btn btn-primary-outline">
+          <i className="fas fa-shopping-bag"></i> Add to Bag
+        </button>
+        <button className="btn btn-primary-solid">
+          <i className="fas fa-bolt"></i> Buy Now
         </button>
       </div>
     </div>
