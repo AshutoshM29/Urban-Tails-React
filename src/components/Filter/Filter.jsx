@@ -1,3 +1,5 @@
+import '../Filter/filter.css'
+
 function Filter() {
     return (
 
