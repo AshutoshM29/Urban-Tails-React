@@ -3,7 +3,7 @@
 body {
   font-size: 1.6rem;
   margin: auto;
-  min-height: 100vw;
+  min-height: 100vh;
   max-width: 100%;
   overflow-x: hidden;
   font-family: 'Dongle', sans-serif;
