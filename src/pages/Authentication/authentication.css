@@ -1,0 +1,130 @@
+.main-authentication {
+    display: flex;
+    margin-top: 4rem;
+    justify-content: space-around;
+}
+
+.form-authentication {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50;
+    height: fit-content;
+    border: 0.2px solid var(--pink-mild);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    color: var(--gray-dominant);
+}
+
+.input-outline {
+    margin: 1rem 0;
+    padding: 0.8rem 0.6rem;
+    border: 0.15rem solid var(--gray-light);
+    border-radius: 5px;
+}
+
+.input-outline:hover {
+    border: 0.15rem solid var(--gray-dominant);
+}
+
+.input-outline:focus {
+    outline: none;
+    border: 0.15rem solid var(--pink-mild);
+}
+
+.label {
+    font-size: 1.6rem;
+    color: var(--gray-dominant);
+}
+
+.form-title {
+    color: var(--gray-mild);
+    margin-bottom: 3rem;
+
+}
+
+.section-tnc {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 5rem;
+    color: var(--gray-light);
+}
+
+.tnc {
+    color: var(--gray-light);
+    font-weight: 300;
+}
+
+input:checked+.tnc {
+    color: var(--pink-dominant);
+}
+
+.section-btn-authentication {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-icons {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+.icons-signup {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    background-color: var(--pink-dominant);
+}
+
+.underline {
+    border: thin;
+}
+
+.span-link {
+    color: var(--gray-light);
+}
+
+.span-link:hover {
+    color: var(--pink-dominant);
+}
+
+.main-authentication .hero-signup {
+    margin-top: -9rem;
+    position: sticky;
+    top: 0rem;
+}
+
+.main-authentication .hero-login {
+    margin-top: -5rem;
+    position: sticky;
+    top: 0rem;
+}
+
+.main-authentication .hero-logout {
+    margin-top: -12rem;
+    position: sticky;
+    top: 0rem;
+}
+
+.btn-primary-solid {
+    background: var(--pink-mild);
+    color: var(--white);
+}
+
+.btn-primary-solid:hover {
+    background: var(--pink-dominant);
+}
+
+.btn-primary-outline {
+    color: var(--gray-mild);
+}
+
+.btn-primary-outline:hover {
+    color: var(--white);
+    background-color: var(--pink-mild);
+}
