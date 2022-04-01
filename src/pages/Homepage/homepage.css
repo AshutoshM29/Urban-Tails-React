@@ -2,17 +2,13 @@
 
 body {
   font-size: 1.6rem;
-  max-width: 2000rem;
   margin: auto;
-  font-family: 'Dongle', sans-serif;
-  font-family: 'Dosis', sans-serif;
-  font-family: 'Nunito', sans-serif;
-}
-
-body {
   min-height: 100vw;
   max-width: 100%;
   overflow-x: hidden;
+  font-family: 'Dongle', sans-serif;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 .nav-bar {
