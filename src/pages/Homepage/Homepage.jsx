@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import '../Homepage/homepage.css'
 
 import {
@@ -36,7 +37,7 @@ function Homepage() {
     <main>
     <h1 className="hero-txt">Purr-fect for your paws,<br/>
             Every Pet's Essential<br/>
-            with <a href="/"><span className="span-imp">Urban Tails</span></a></h1>
+            with <Link to="/Homepage"><span className="span-imp">Urban Tails</span></Link></h1>
 
         <img className="hero-image" src={heroPets} alt="hero image"/>
 
@@ -45,70 +46,70 @@ function Homepage() {
             <h3><span>SHOP FOR DOGS</span></h3>
         </div>
         <div className="section-category">
-            <a href="/Pages/Dog-Products/treat.html">
+            <Link to="/Product">
                 <img className="img-category" src={dogTreat} alt="treat" />
                 <p className="desc-category">Treat</p>
-            </a>
+            </Link>
 
-            <a href="/Pages/Dog-Products/leash.html">
+            <Link to="/Product">
                 <img className="img-category" src={dogLeash} alt="Leash & Harness" />
                 <p className="desc-category">Leash & Harness</p>
-            </a>
+            </Link>
 
-            <a href="/">
+            <Link to="/Product">
                 <img className="img-category" src={dogToys} alt="Toys" />
                 <p className="desc-category">Toys</p>
-            </a>
+            </Link>
 
-            <a href="/">
+            <Link to="/Product">
                 <img className="img-category" src={dogGrooming} alt="Grooming" />
                 <p className="desc-category">Grooming</p>
-            </a>
+            </Link>
 
-            <a href="/">
+            <Link to="/Product">
                 <img className="img-category" src={dogBedding} alt="Bedding" />
                 <p className="desc-category">Bedding</p>
-            </a>
+            </Link>
 
-            <a href="/">
+            <Link to="/Product">
                 <img className="img-category" src={dogClothing} alt="Clothing & Accessories" />
                 <p className="desc-category">Clothing & Accessories</p>
-            </a>
+            </Link>
         </div>
 
         <div className="section-part-head center">
             <h3><span>SHOP FOR CATS</span></h3>
         </div>
         <div className="section-category">
-            <a href="/">
+            <Link to="/Product">
                 <img className="img-category" src={catClothing} alt="Clothing & Accessories" />
                 <p className="desc-category">Clothing & Accessories</p>
-            </a>
+            </Link>
 
-            <a href="/">
+            <Link to="/Product">
                 <img className="img-category" src={catTreat} alt="treat" />
                 <p className="desc-category">Treat</p>
-            </a>
+            </Link>
 
-            <a href="/">
+            <Link to="/Product">
                 <img className="img-category" src={catToys} alt="Toys" />
                 <p className="desc-category">Toys</p>
-            </a>
+            </Link>
 
-            <a href="/">
+            <Link to="/Product">
                 <img className="img-category" src={catLitter} alt="Litter" />
                 <p className="desc-category">Litter</p>
-            </a>
+            </Link>
 
-            <a href="/">
+            <Link to="/Product">
                 <img className="img-category" src={catGrooming} alt="Grooming" />
                 <p className="desc-category">Grooming</p>
-            </a>
+            </Link>
 
-            <a href="/">
+            <Link to="/Product">
                 <img className="img-category" src={catBedding} alt="Bedding" />
                 <p className="desc-category">Bedding</p>
-            </a>
+            </Link>
         </div>
 
 
@@ -117,17 +118,17 @@ function Homepage() {
             <h3><span>SHOP FOR ESSENTIALS</span></h3>
         </div>
         <div className="section-category">
-            <a href="/">
+            <Link to="/Product">
                 <img className="img-category-ese" loading="lazy" src={essPuppy} alt="Puppy" />
-            </a>
+            </Link>
 
-            <a href="/">
+            <Link to="/Product">
                 <img className="img-category-ese" loading="lazy" src={essKitten} alt="Kitten" />
-            </a>
+            </Link>
 
-            <a href="/">
+            <Link to="/Product">
                 <img className="img-category-ese" loading="lazy" src={essSmall} alt="Small Animal" />
-            </a>
+            </Link>
         </div>
 
         <div className="section-about">
@@ -151,30 +152,30 @@ function Homepage() {
             <h3><span>BRAND VALUES</span></h3>
         </div>
         <div className="section-value">
-            <a href="/">
+            <div>
                 <img className="img-value" src={valueQty} alt="Quality" />
                 <p className="desc-value">Quality</p>
-            </a>
+            </div>
 
-            <a href="/">
+            <div>
                 <img className="img-value" src={valueTrust} alt="Trustworthy" />
                 <p className="desc-value">Trustworthy</p>
-            </a>
+            </div>
 
-            <a href="/">
+            <div>
                 <img className="img-value" src={valueSprt} alt="Support" />
                 <p className="desc-value">Support</p>
-            </a>
+            </div>
 
-            <a href="/">
+            <div>
                 <img className="img-value" src={valueDlry} alt="Free Delivery" />
                 <p className="desc-value">Free Delivery</p>
-            </a>
+            </div>
 
-            <a href="/">
+            <div>
                 <img className="img-value" src={valueBag} alt="One Stop Shop" />
                 <p className="desc-value">One Stop</p>
-            </a>
+            </div>
         </div>
 
         <div className="section-part-head center">
