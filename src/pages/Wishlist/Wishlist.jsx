@@ -1,6 +1,8 @@
 function Wishlist() {
     return (
-      <div>Wishlist</div>
+        <h1 className="section-header">
+          Your Wishlist is empty!!
+        </h1>
     )
   }
   
