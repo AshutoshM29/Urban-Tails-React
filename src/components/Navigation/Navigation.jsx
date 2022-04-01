@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import {
 pawLogo,
 } from '../../assets/images'
@@ -7,9 +8,9 @@ return (
 <nav className="nav-header nav-bar">
     <div className="nav-section">
         <div className="nav-section-items">
-            <a href="/index.html">
+            <Link to="/Homepage">
                 <img className="nav-logo" loading="eager" src={pawLogo} alt="Logo" />
-            </a>
+            </Link>
         </div>
         <ul className="nav-bar-links nav-section-items">
             <li className="list-inline-item">
@@ -38,44 +39,44 @@ return (
         </label>
         <ul className="nav-icons">
             <li className="list-inline-icons">
-                <a className="nav-icon-link" href="/Pages/signup.html">
+                <Link className="nav-icon-link" to="/Signup">
                     <span className="nav-icon">
                         <i className="fas fa-user-plus"></i>
                     </span>
                     <span className="nav-icon-text">
                         Sign Up
                     </span>
-                </a>
+                </Link>
             </li>
             <li className="list-inline-icons">
-                <a className="nav-icon-link">
+                <Link className="nav-icon-link" to="/">
                     <span className="nav-icon">
                         <i className="fas fa-user"></i>
                     </span>
                     <span className="nav-icon-text">
                         Profile
                     </span>
-                </a>
+                </Link>
             </li>
             <li className="list-inline-icons">
-                <a className="nav-icon-link" href="/Pages/wishlist.html">
+                <Link className="nav-icon-link" to="/Wishlist">
                     <span className="nav-icon">
                         <i className="fas fa-heart"></i>
                     </span>
                     <span className="nav-icon-text">
                         Wishlist
                     </span>
-                </a>
+                </Link>
             </li>
             <li className="list-inline-icons">
-                <a className="nav-icon-link" href="/Pages/bag.html">
+                <Link className="nav-icon-link" to="/Cart">
                     <span className="nav-icon">
                         <i className="fas fa-shopping-bag"></i>
                     </span>
                     <span className="nav-icon-text">
                         Bag
                     </span>
-                </a>
+                </Link>
             </li>
         </ul>
     </div>
