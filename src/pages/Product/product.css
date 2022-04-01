@@ -1,0 +1,117 @@
+body {
+    min-height: auto;
+    overflow-x: hidden;
+}
+
+.main-product {
+    display: flex;
+}
+
+.main-section {
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+hr {
+    width: 50%;
+}
+
+.section-card {
+    margin-top: 3.5rem;
+    padding: 2rem;
+}
+
+.path {
+    color: var(--gray-light);
+}
+
+.container-card {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-evenly;
+}
+
+.card {
+    margin: 3rem 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0.1rem 0.1rem 0.5rem var(--gray-lighter)
+}
+
+.card-vertical-img {
+    object-fit: fill;
+}
+
+.btn-primary-solid {
+    background: var(--pink-mild);
+    color: var(--white);
+}
+
+.btn-primary-solid:hover {
+    background: var(--pink-dominant);
+}
+
+.btn-primary-outline {
+    color: var(--gray-mild);
+}
+
+.btn-primary-outline:hover {
+    color: var(--white);
+    background-color: var(--pink-mild);
+}
+
+
+.btn-wishlist {
+    display: flex;
+    border: none;
+    background-color: transparent;
+    font-size: 2rem;
+    position: absolute;
+    margin: 1.5rem 26.5rem;
+    color: var(--gray-mild);
+}
+
+.btn-wishlist:hover {
+    color: var(--red-dominant);
+}
+
+.price-section {
+    margin-top: 0rem;
+}
+
+.section-review {
+    margin: 0.6rem;
+    color: var(--gray-mild);
+}
+
+.rating-oa {
+    background-color: var(--orange-light);
+    color: var(--white);
+    width: fit-content;
+    padding: 0.2rem;
+    margin-left: 0.4rem;
+    border-radius: 0.5rem;
+}
+
+.section-price {
+    margin: 1rem 0;
+}
+
+.price {
+    margin-left: 1rem;
+    font-weight: 600;
+    padding: 0 0.3rem;
+}
+
+.initial-price {
+    opacity: 0.5;
+    text-decoration: line-through;
+    padding: 0 0.3rem;
+}
+
+.discount {
+    color: var(--green-mild);
+    font-weight: 600;
+    padding: 0 0.3rem;
+}

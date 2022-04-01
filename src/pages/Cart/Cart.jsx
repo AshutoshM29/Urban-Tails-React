@@ -1,6 +1,8 @@
 function Cart() {
     return (
-      <div>Cart</div>
+        <h1 className="section-header">
+          Your Bag is empty!!
+        </h1>
     )
   }
   
