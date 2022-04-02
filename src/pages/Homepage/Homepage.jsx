@@ -30,6 +30,7 @@ import {
     brandBayer,
     brandRuffwear,
   } from '../../assets/images'
+import { Categories } from './Dog-Category'
 
 
 function Homepage() {
@@ -45,37 +46,7 @@ function Homepage() {
         <div className="section-part-header center">
             <h3><span>SHOP FOR DOGS</span></h3>
         </div>
-        <div className="section-category">
-            <Link to="/Product">
-                <img className="img-category" src={dogTreat} alt="treat" />
-                <p className="desc-category">Treat</p>
-            </Link>
-
-            <Link to="/Product">
-                <img className="img-category" src={dogLeash} alt="Leash & Harness" />
-                <p className="desc-category">Leash & Harness</p>
-            </Link>
-
-            <Link to="/Product">
-                <img className="img-category" src={dogToys} alt="Toys" />
-                <p className="desc-category">Toys</p>
-            </Link>
-
-            <Link to="/Product">
-                <img className="img-category" src={dogGrooming} alt="Grooming" />
-                <p className="desc-category">Grooming</p>
-            </Link>
-
-            <Link to="/Product">
-                <img className="img-category" src={dogBedding} alt="Bedding" />
-                <p className="desc-category">Bedding</p>
-            </Link>
-
-            <Link to="/Product">
-                <img className="img-category" src={dogClothing} alt="Clothing & Accessories" />
-                <p className="desc-category">Clothing & Accessories</p>
-            </Link>
-        </div>
+        <Categories />
 
         <div className="section-part-head center">
             <h3><span>SHOP FOR CATS</span></h3>
