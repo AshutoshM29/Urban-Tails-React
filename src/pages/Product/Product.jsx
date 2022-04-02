@@ -1,6 +1,5 @@
-import '../Product/product.css'
 import { Sidebar } from "../../components/Sidebar/Sidebar"
-import { CardVertical } from "../../components/Card/Card-Vertical/Card-Vertical"
+import { Cards } from "../../components/Card/Card-Vertical/Card-Vertical"
 import { Link } from 'react-router-dom'
 
 
@@ -10,11 +9,11 @@ return (
   <Sidebar />
   <div className="section-card">
     <div className="container-card-head">
-      <Link className="path" to="/Homepage">Home</Link>
+      <Link className="path" to="/Homepage">Home > </Link>
       <Link className="path" to="/Product">Dog Treats</Link>
       <h2>Dog Treats</h2>
     </div>
-    <CardVertical />
+    <Cards />
   </div>
 
 </main>
