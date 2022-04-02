@@ -8,8 +8,8 @@ return ( <div className="section-category">
     { categories.map((categories)=>{
     return (
     <Link to="/Product">
-    <img className="img-category" src={`${categories.categoryImage}`} alt={`${categories.categoryName}`} />
-    <p className="desc-category">{categories.categoryName}</p>
+    <img className="img-category" src={`${categories.categoryImageDog}`} alt={`${categories.categoryName}`} />
+    <p className="desc-category">{categories.titleDog}</p>
     </Link>
     )
     })
