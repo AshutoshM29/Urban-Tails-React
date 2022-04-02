@@ -76,8 +76,9 @@ hr {
     color: var(--red-dominant);
 }
 
-.price-section {
-    margin-top: 0rem;
+.section-price {
+    margin-top: -1rem;
+    font-size: large;
 }
 
 .section-review {
@@ -92,10 +93,6 @@ hr {
     padding: 0.2rem;
     margin-left: 0.4rem;
     border-radius: 0.5rem;
-}
-
-.section-price {
-    margin: 1rem 0;
 }
 
 .price {
