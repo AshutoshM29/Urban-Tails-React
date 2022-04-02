@@ -1,50 +1,51 @@
-import { v4 as uuid } from "uuid";
+import {
+  v4 as uuid
+} from "uuid";
 
-/**
- * Category Database can be added here.
- * You can add category of your wish with different attributes
- * */
+import {dogTreat, dogLeash, dogToys, dogGrooming, dogBedding, dogClothing} from "../../assets/images"
 
-export const categories = [
-  {
+// Dog Categories
+
+export const categories = [{
     _id: uuid(),
     categoryName: "Treats",
-    description:
-      "Treats for your pets",
+    description: "Treats for your dogs",
+    categoryImage: dogTreat,
   },
 
   {
     _id: uuid(),
-    categoryName: "Leash",
-    description:
-      "Leash and Harness for your pets",
+    categoryName: "Leash & Harness",
+    description: "Leash and Harness for your dogs",
+    categoryImage: dogLeash,
   },
-  
+
   {
     _id: uuid(),
     categoryName: "Toys",
-    description:
-      "Toys for your pets",
+    description: "Toys for your dogs",
+    categoryImage: dogToys,
   },
 
   {
     _id: uuid(),
     categoryName: "Grooming",
-    description:
-      "Grooming stuffs for your pets",
+    description: "Grooming stuffs for your dogs",
+    categoryImage: dogGrooming,
   },
 
   {
     _id: uuid(),
     categoryName: "Bedding",
-    description:
-      "Bedding for your pets",
+    description: "Bedding for your dogs",
+    categoryImage: dogBedding,
   },
 
   {
     _id: uuid(),
-    categoryName: "Clothing",
-    description:
-      "Clothing & Accessories for your pets",
+    categoryName: "Clothing & Accessories",
+    description: "Clothing & Accessories for your dogs",
+    categoryImage: dogClothing,
   },
+
 ];

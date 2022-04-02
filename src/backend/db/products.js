@@ -1,30 +1,70 @@
-import { v4 as uuid } from "uuid";
+import {
+  v4 as uuid
+} from "uuid";
 
-/**
- * Product Database can be added here.
- * You can add products of your wish with different attributes
- * */
+export const products = [{
+    _id: uuid(),
+    title: "Dogsee Chew",
+    rating: "4",
+    actualPrice: "2500",
+    discountPrice: "450",
+    discount: "82%",
+    img: "../../assets/Dogs/Product/bone-chew.webp",
+    categoryName: "dog-treats",
+  },
 
-export const products = [
   {
     _id: uuid(),
-    title: "You Can WIN",
-    author: "Shiv Khera",
-    price: "5000",
-    categoryName: "non-fiction",
+    title: "Apple & Banana Biscuits",
+    rating: "4.2",
+    actualPrice: "2500",
+    discountPrice: "450",
+    discount: "82%",
+    img: "../../assets/Dogs/Product/yummy.webp",
+    categoryName: "dog-treats",
   },
+
   {
     _id: uuid(),
-    title: "You are Winner",
-    author: "Junaid Qureshi",
-    price: "3000",
-    categoryName: "horror",
+    title: "Duo Stick",
+    rating: "4.6",
+    actualPrice: "2500",
+    discountPrice: "450",
+    discount: "82%",
+    img: "../../assets/Dogs/Product/duo-stick.webp",
+    categoryName: "dog-treats",
   },
+
   {
     _id: uuid(),
-    title: "Think and Grow Rich",
-    author: "Shiv Khera",
-    price: "1000",
-    categoryName: "fiction",
+    title: "Mini's MaM",
+    rating: "4",
+    actualPrice: "2500",
+    discountPrice: "450",
+    discount: "82%",
+    img: "../../assets/Dogs/Product/mini.webp",
+    categoryName: "dog-treats",
+  },
+
+  {
+    _id: uuid(),
+    title: "Sara's Jerky",
+    rating: "4",
+    actualPrice: "2500",
+    discountPrice: "450",
+    discount: "82%",
+    img: "../../assets/Dogs/Product/sara.webp",
+    categoryName: "dog-treats",
+  },
+
+  {
+    _id: uuid(),
+    title: "DentaStix",
+    rating: "4",
+    actualPrice: "2500",
+    discountPrice: "450",
+    discount: "82%",
+    img: "../../assets/Dogs/Product/dentastix.webp",
+    categoryName: "dog-treats",
   },
 ];
