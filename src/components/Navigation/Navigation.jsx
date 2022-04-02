@@ -9,7 +9,7 @@ return (
     <div className="nav-section">
         <div className="nav-section-items">
             <Link to="/Homepage">
-                <img className="nav-logo" loading="eager" src={pawLogo} alt="Logo" />
+            <img className="nav-logo" loading="eager" src={pawLogo} alt="Logo" />
             </Link>
         </div>
         <ul className="nav-bar-links nav-section-items">
@@ -40,42 +40,42 @@ return (
         <ul className="nav-icons">
             <li className="list-inline-icons">
                 <Link className="nav-icon-link" to="/Signup">
-                    <span className="nav-icon">
-                        <i className="fas fa-user-plus"></i>
-                    </span>
-                    <span className="nav-icon-text">
-                        Sign Up
-                    </span>
+                <span className="nav-icon">
+                    <i className="fas fa-user-plus"></i>
+                </span>
+                <span className="nav-icon-text">
+                    Sign Up
+                </span>
                 </Link>
             </li>
             <li className="list-inline-icons">
                 <Link className="nav-icon-link" to="/">
-                    <span className="nav-icon">
-                        <i className="fas fa-user"></i>
-                    </span>
-                    <span className="nav-icon-text">
-                        Profile
-                    </span>
+                <span className="nav-icon">
+                    <i className="fas fa-user"></i>
+                </span>
+                <span className="nav-icon-text">
+                    Profile
+                </span>
                 </Link>
             </li>
             <li className="list-inline-icons">
                 <Link className="nav-icon-link" to="/Wishlist">
-                    <span className="nav-icon">
-                        <i className="fas fa-heart"></i>
-                    </span>
-                    <span className="nav-icon-text">
-                        Wishlist
-                    </span>
+                <span className="nav-icon">
+                    <i className="fas fa-heart"></i>
+                </span>
+                <span className="nav-icon-text">
+                    Wishlist
+                </span>
                 </Link>
             </li>
             <li className="list-inline-icons">
                 <Link className="nav-icon-link" to="/Cart">
-                    <span className="nav-icon">
-                        <i className="fas fa-shopping-bag"></i>
-                    </span>
-                    <span className="nav-icon-text">
-                        Bag
-                    </span>
+                <span className="nav-icon">
+                    <i className="fas fa-shopping-bag"></i>
+                </span>
+                <span className="nav-icon-text">
+                    Bag
+                </span>
                 </Link>
             </li>
         </ul>
