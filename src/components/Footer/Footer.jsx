@@ -1,6 +1,6 @@
 function Footer() {
-    return (<footer className="flex-align-center">
-    
+return (<footer className="flex-align-center">
+
     <div className="contact">
         <p><i className="icons fas fa-phone-alt"></i> +91 0123456789</p>
         <p><i className="icons fab fa-whatsapp"></i> +91 9876543210</p>
@@ -47,6 +47,6 @@ function Footer() {
     </ul>
     <div className="with-love">Made with ❤️ by : Ashutosh</div>
 </footer>)
-  }
-  
-  export {Footer} 
+}
+
+export {Footer}
