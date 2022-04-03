@@ -1,4 +1,5 @@
 export {Homepage} from "./Homepage/Homepage";
+export {Categories} from "./Homepage/Dog-Category";
 export {Cart} from "./Cart/Cart";
 export {Wishlist} from "./Wishlist/Wishlist";
 export {Product} from "./Product/Product";
