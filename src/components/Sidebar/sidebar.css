@@ -9,7 +9,7 @@ hr {
 }
 
 .section-filter {
-    width: 30vw;
+    width: 30%;
     border-right: 0.2rem solid var(--pink-nav);
     position: sticky;
     top: 20vh;
