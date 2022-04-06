@@ -9,7 +9,7 @@ export const Sidebar = () => {
         <div className="flex">
             <h3 className="header-filter">Filter</h3>
             <label className="switch">
-                <input onClick={()=>clearFilterHandler(dispatch)} type="checkbox" />
+                <input onChange={()=>clearFilterHandler(dispatch)} type="checkbox" />
                 <span className="slider round"></span>
             </label>
         </div>
@@ -23,15 +23,9 @@ export const Sidebar = () => {
                         type="range"
                         min="99"
                         max="999"
-                        list="tickmarks"
                         checked={state.discountValue}
-                        onClick={(e)=>discountHandler(e,dispatch)}
+                        onChange={(e)=>discountHandler(e,dispatch)}
                     />
-                    <datalist id="tickmarks">
-                        <option value="99">99</option>
-                        <option value="499">500</option>
-                        <option value="999">999</option>
-                    </datalist>
                     <label className="price-range">
                         <span id="price-max">₹99</span>
                         <span id="price-min">₹499</span>
@@ -45,37 +39,41 @@ export const Sidebar = () => {
                         <input
                             className="input-checkbox"
                             type="checkbox"
+                            id="rating"
                             checked={state.rating4}
-                            onClick={()=>rating4Handler(dispatch)}
+                            onChange={()=>rating4Handler(dispatch)}
                         />
-                        <label className="input-desc">4 Stars & above</label>
+                        <label className="input-desc" htmlFor="rating" >4 Stars & above</label>
                     </div>
                     <div className='checkbox'>
                         <input
                             className="input-checkbox"
                             type="checkbox"
+                            id="rating"
                             checked={state.rating3}
-                            onClick={()=>rating3Handler(dispatch)}
+                            onChange={()=>rating3Handler(dispatch)}
                         />
-                        <label className="input-desc">3 Stars & above</label>
+                        <label className="input-desc" htmlFor="rating" >3 Stars & above</label>
                     </div>
                     <div className='checkbox'>
                         <input
                             className="input-checkbox"
                             type="checkbox"
+                            id="rating"
                             checked={state.rating2}
-                            onClick={()=>rating2Handler(dispatch)}
+                            onChange={()=>rating2Handler(dispatch)}
                         />
-                        <label className="input-desc">2 Stars & above</label>
+                        <label className="input-desc" htmlFor="rating" >2 Stars & above</label>
                     </div>
                     <div className='checkbox'>
                         <input
                             className="input-checkbox"
                             type="checkbox"
+                            id="rating"
                             checked={state.rating1}
-                            onClick={()=>rating1Handler(dispatch)}
+                            onChange={()=>rating1Handler(dispatch)}
                         />
-                        <label className="input-desc">1 Stars & above</label>
+                        <label className="input-desc" htmlFor="rating" >1 Stars & above</label>
                     </div>
                     <br/>
                     <hr/>
@@ -83,21 +81,23 @@ export const Sidebar = () => {
                     <h4 className="sub-header-filter">Life Stages</h4>
                     <div className="radio">
                         <input
-                            type="radio" id="puppy"
+                            type="radio"
+                            id="puppy"
                             name="category"
                             value="puppy"
                             checked={state.sortBy === "puppy"}
-                            onClick={(e)=>sortByCategoryHandler(e,dispatch)}
+                            onChange={(e)=>sortByCategoryHandler(e,dispatch)}
                         />
                         <label className="input-desc" htmlFor="puppy">Puppy</label>
                     </div>
                     <div className="radio">
                         <input  
-                            type="radio" id="adult"
+                            type="radio"
+                            id="adult"
                             name="category"
                             value="adult"
                             checked={state.sortBy === "adult"}
-                            onClick={(e)=>sortByCategoryHandler(e,dispatch)}
+                            onChange={(e)=>sortByCategoryHandler(e,dispatch)}
                         />
                         <label className="input-desc" htmlFor="adult">Adult</label>
                     </div>
@@ -108,7 +108,7 @@ export const Sidebar = () => {
                             name="category"
                             value="senior"
                             checked={state.sortBy === "senior"}
-                            onClick={(e)=>sortByCategoryHandler(e,dispatch)}
+                            onChange={(e)=>sortByCategoryHandler(e,dispatch)}
                         />
                         <label className="input-desc" htmlFor="senior">Senior</label>
                     </div>
@@ -124,7 +124,7 @@ export const Sidebar = () => {
                             name="price_sort"
                             value="price_sort"
                             checked={state.priceHighLow === "low-2-high"}
-                            onClick={()=>priceHighToLowHandler(dispatch)}
+                            onChange={()=>priceHighToLowHandler(dispatch)}
                         />
                         <label className="input-desc" htmlFor="price_sort">Low to high</label>
                     </div>
@@ -136,9 +136,9 @@ export const Sidebar = () => {
                             name="price_sort"
                             value="price_sort"
                             checked={state.priceHighLow === "high-2-low"}
-                            onClick={()=>priceLowToHighHandler(dispatch)}
+                            onChange={()=>priceLowToHighHandler(dispatch)}
                         />
-                        <label className="input-desc" htmlFor="footwear">High to low</label>
+                        <label className="input-desc" htmlFor="high-2-low">High to low</label>
                     </div>
 
                 <br/>
