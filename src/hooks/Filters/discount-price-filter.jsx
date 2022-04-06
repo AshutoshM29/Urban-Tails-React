@@ -1,5 +1,5 @@
 
-export function discountedItems(product, value) {
+export function discountedPrice(product, value) {
     if (value) {
         return product.filter((items) => {
             return items.discountedPrice >= value

@@ -4,16 +4,16 @@ export function reducerFunction(state, action) {
             return { ...state, sortBy: action.payload }
         case "rating1":
 
-            return { ...state, stars1: !state.stars1 }
+            return { ...state, rating1: !state.rating1 }
         case "rating2":
 
-            return { ...state, stars2: !state.stars2 }
+            return { ...state, rating2: !state.rating2 }
         case "rating3":
 
-            return { ...state, stars3: !state.stars3 }
+            return { ...state, rating3: !state.rating3 }
         case "rating4":
 
-            return { ...state, stars4: !state.stars4 }
+            return { ...state, rating4: !state.rating4 }
         case "price":
 
             return { ...state, priceSelector: action.payload }
@@ -24,13 +24,12 @@ export function reducerFunction(state, action) {
             return {
                 ...state,
                 sortBy: null,
-                priceSelector: null,
                 discountValue: 0,
                 priceHighLow: null,
-                stars1: false,
-                stars2: false,
-                stars3: false,
-                stars4: false,
+                rating1: false,
+                rating2: false,
+                rating3: false,
+                rating4: false,
                 
             }
         case "price_sort":

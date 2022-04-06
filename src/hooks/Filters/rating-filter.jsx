@@ -1,21 +1,21 @@
-export const starredProducts = (SortedProducts, { stars1, stars2, stars3, stars4 }) => {
+export const starredProducts = (SortedProducts, { rating1, rating2, rating3, rating4 }) => {
 
-    if (stars1) {
+    if (rating1) {
         return SortedProducts.filter (items => {
             return (items.rating >= 1);
         })
     }
-    if (stars2) {
+    if (rating2) {
         return SortedProducts.filter (items => {
             return (items.rating >= 2);
         })
     }
-    if (stars3) {
+    if (rating3) {
         return SortedProducts.filter (items => {
             return (items.rating >= 3);
         })
     }
-    if (stars4) {
+    if (rating4) {
         return SortedProducts.filter (({ rating }) => {
             return (rating >= 4);
         })
