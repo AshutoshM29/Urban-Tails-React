@@ -1,0 +1,11 @@
+.badge-count {
+    position: relative;
+    margin-top: -1.5rem;
+    margin-left: -1.5rem;
+}
+
+.bg-nav {
+    color: var(--pink-dominant);
+    border: var(--pink-nav) 0.2rem solid;
+    background-color: var(--white);
+}
