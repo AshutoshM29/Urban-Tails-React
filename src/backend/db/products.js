@@ -2,7 +2,14 @@ import {
   v4 as uuid
 } from "uuid";
 
-import {boneChew, dentastix, duoStick, mini, sara, yummy} from "../../assets/images"
+import {
+  boneChew,
+  dentastix,
+  duoStick,
+  mini,
+  sara,
+  yummy
+} from "../../assets/images"
 
 export const products = [{
     _id: uuid(),
@@ -12,10 +19,12 @@ export const products = [{
     textBadge: "Trending",
     rating: "4.0 ",
     reviews: "8.6K reviews",
-    price: "₹450",
-    initialPrice: "₹2500",
+    price: 99,
+    discountedPrice: 99,
+    initialPrice: "2500",
     discount: "82%",
-    categoryName: "dog-treats",
+    categoryName: "puppy",
+    brand: "petmate"
   },
 
   {
@@ -26,10 +35,12 @@ export const products = [{
     textBadge: "Best Seller",
     rating: "4.2 ",
     reviews: "6.2K reviews",
-    price: "₹450",
-    initialPrice: "₹2500",
+    price: 299,
+    discountedPrice: 299,
+    initialPrice: "2500",
     discount: "82%",
-    categoryName: "dog-treats",
+    categoryName: "puppy",
+    brand: "purina"
   },
 
   {
@@ -40,10 +51,12 @@ export const products = [{
     textBadge: "Few Left",
     rating: "4.6 ",
     reviews: "12.3K reviews",
-    price: "₹450",
-    initialPrice: "₹2500",
+    price: 499,
+    discountedPrice: 499,
+    initialPrice: "2500",
     discount: "82%",
-    categoryName: "dog-treats",
+    categoryName: "senior",
+    brand: "kong"
   },
 
   {
@@ -54,10 +67,12 @@ export const products = [{
     textBadge: "Few Left",
     rating: "4.6 ",
     reviews: "12.3K reviews",
-    price: "₹450",
-    initialPrice: "₹2500",
+    price: 899,
+    discountedPrice: 899,
+    initialPrice: "2500",
     discount: "82%",
-    categoryName: "dog-treats",
+    categoryName: "adult",
+    brand: "bayer",
   },
 
   {
@@ -68,10 +83,12 @@ export const products = [{
     textBadge: "Restocked",
     rating: "3.5 ",
     reviews: "6.6K reviews",
-    price: "₹450",
-    initialPrice: "₹2500",
+    price: 699,
+    discountedPrice: 699,
+    initialPrice: "2500",
     discount: "82%",
-    categoryName: "dog-treats",
+    categoryName: "adult",
+    brand: "bayer",
   },
 
   {
@@ -80,11 +97,13 @@ export const products = [{
     img: dentastix,
     productDesc: "Made with real Apples & Bananas, free of Gluten & Artificial Flavours. Suitable for all Dogs",
     textBadge: "Trending",
-    rating: "4.2 ",
+    rating: "2.4 ",
     reviews: "8.5K reviews",
-    price: "₹450",
-    initialPrice: "₹2500",
+    price: 99,
+    discountedPrice: 99,
+    initialPrice: "2500",
     discount: "82%",
-    categoryName: "dog-treats",
+    categoryName: "senior",
+    brand: "kong",
   },
 ];

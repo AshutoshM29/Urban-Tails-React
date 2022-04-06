@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
-import { useProducts } from "../../../hooks/useProducts";
+import { useSortedProduct } from "../../../hooks/Filters/filter";
 import "../../../pages/Product/product.css"
-const Cards=()=>{
-const {products}=useProducts();
+export const Cards = () => {
+const { sortPriceHighLow } = useSortedProduct()
 
-return ( <div className="container-card">
-    { products.map((products)=>{
+return (sortPriceHighLow.length === 0) ? <div className="container-card">Oh noo!! Poduct not found, try changing filters
+</div> : <div className="container-card">
+    {sortPriceHighLow.map((products) => {
     return (
     <div className="card card-vertical">
         <div className="img-content">
@@ -24,9 +24,9 @@ return ( <div className="container-card">
             <p className="body-cp-xsm">{products.reviews}</p>
         </div>
         <div className="section-price">
-            <span className="price">{products.price}</span>
-            <span className="initial-price">{products.initialPrice}</span>
-            <span className="discount">{products.discount}</span>
+            <span className="price">₹{products.price}</span>
+            <span className="initial-price">₹{products.initialPrice}</span>
+            <span className="discount">₹{products.discount}</span>
         </div>
         <button className="btn btn-primary-outline">
             <i className="fas fa-shopping-bag"></i> Add to Bag
@@ -39,6 +39,4 @@ return ( <div className="container-card">
     })
     }
 </div>
-)
 }
-export {Cards}

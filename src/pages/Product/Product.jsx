@@ -9,7 +9,8 @@ return (
   <Sidebar />
   <div className="section-card">
     <div className="container-card-head">
-      <Link className="path" to="/Homepage">Home > </Link>
+      <Link className="path" to="/Homepage">Home</Link>
+      <small> <i class="fas fa-angle-double-right"></i> </small>
       <Link className="path" to="/Product">Dog Treats</Link>
       <h2>Dog Treats</h2>
     </div>
