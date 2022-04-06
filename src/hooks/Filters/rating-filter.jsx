@@ -1,4 +1,4 @@
-export const starredProducts = (SortedProducts, { rating1, rating2, rating3, rating4 }) => {
+export const ratingProducts = (SortedProducts, { rating1, rating2, rating3, rating4 }) => {
 
     if (rating1) {
         return SortedProducts.filter (items => {

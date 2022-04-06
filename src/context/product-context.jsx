@@ -5,7 +5,7 @@ import { filterProducts,
          pricedProducts,
          reducerFunction,
          SortedProducts,
-         starredProducts} from "../hooks/Filters/filter";
+         ratingProducts} from "../hooks/Filters/filter";
 
 const reducerValues = {
     sortBy: null,
@@ -22,7 +22,7 @@ export function ProductProvider({ children }) {
     const [state, dispatch] = useReducer(reducerFunction, reducerValues)
     const { products } = useProducts()
     const filteredProducts = filterProducts(products, state.sortBy)
-    const starProducts = starredProducts(filteredProducts, state)
+    const starProducts = ratingProducts(filteredProducts, state)
     const priceProducts = pricedProducts(starProducts, state.priceSelector)
     const discountItems = discountedPrice(priceProducts, state.discountValue)
     const sortPriceHighLow = SortedProducts(discountItems, state.priceHighLow)
