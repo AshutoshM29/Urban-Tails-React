@@ -1,7 +1,9 @@
 import { useSortedProduct } from "../../../hooks/Filters/filter";
+import { useCartContext } from "../../../hooks/Cart/cart-context";
 import "../../../pages/Product/product.css"
 export const Cards = () => {
 const { sortPriceHighLow } = useSortedProduct()
+const { dispatch } = useCartContext();
 
 return (sortPriceHighLow.length === 0) ? <div className="container-card">Oh noo!! Poduct not found, try changing filters
 </div> : <div className="container-card">
@@ -26,12 +28,14 @@ return (sortPriceHighLow.length === 0) ? <div className="container-card">Oh noo!
         <div className="section-price">
             <span className="price">₹{products.price}</span>
             <span className="initial-price">₹{products.initialPrice}</span>
-            <span className="discount">₹{products.discount}</span>
+            <span className="discount">({products.discount})</span>
         </div>
-        <button className="btn btn-primary-outline">
+        <button className="btn btn-primary-outline" 
+                onClick={() =>dispatch({type:"addToCartHandler",payload:products})}>
             <i className="fas fa-shopping-bag"></i> Add to Bag
         </button>
-        <button className="btn btn-primary-solid">
+        <button className="btn btn-primary-solid" 
+                onClick={() =>dispatch({type:"addToCartHandler",payload:products})}>
             <i className="fas fa-bolt"></i> Buy Now
         </button>
     </div>
