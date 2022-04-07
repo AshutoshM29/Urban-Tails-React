@@ -18,6 +18,7 @@
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
+    margin-top: 3rem;
 }
 
 .bag-details {
@@ -115,7 +116,7 @@
     color: var(--gray-mild);
 }
 
-.path-cart {
+.path-page {
     color: var(--gray-light);
     position: relative;
     margin-top: -1.3rem;

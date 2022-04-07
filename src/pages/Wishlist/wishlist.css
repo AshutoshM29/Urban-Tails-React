@@ -1,0 +1,69 @@
+.main-wishlist {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container-wishlist-head {
+    display: flex;
+    position: absolute;
+    margin: 1rem 115rem 0 0;
+}
+
+.header-wishlist {
+    color: var(--gray-mild);
+}
+
+.section-wishlist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.star-rating {
+    font-size: 1.5rem;
+}
+
+.overlay-content {
+    width: 95%;
+    height: 92%;
+    z-index: 2;
+}
+
+.img-content-horizontal {
+    display: flex;
+    font-size: 2rem;
+    color: var(--white);
+    z-index: 3;
+    position: absolute;
+    margin-top: 0.6rem;
+    margin-left: 45rem;
+}
+
+.section-review {
+    margin: 0.6rem;
+    color: var(--gray-mild);
+}
+
+.rating-oa {
+    background-color: var(--orange-light);
+    color: var(--white);
+    width: fit-content;
+    padding: 0.2rem;
+    margin-left: 0.4rem;
+    border-radius: 0.5rem;
+}
+
+.section-wishlist .btn-wishlist-fixed {
+    position: absolute;
+    margin-top: 4rem;
+    margin-left: 45rem;
+    font-size: 1.5rem;
+    color: var(--red-dominant);
+    background-color: transparent;
+    border: solid 0.1rem var(--gray-mild);
+    border-radius: 50%;
+    padding: 0rem;
+    width: 3rem;
+    height: 3rem;
+}
