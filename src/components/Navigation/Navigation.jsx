@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useCartContext } from "../../hooks/Cart/cart-context";
+import { useWishContext } from "../../hooks/Wishlist/wish-context";
 import "./navigation.css"
 import {
 pawLogo,
@@ -7,6 +8,7 @@ pawLogo,
 
 function Navigation() {
     const {state}=useCartContext()
+    const {wishState}=useWishContext();
 return (
 <nav className="nav-header nav-bar">
     <div className="nav-section">
@@ -65,7 +67,7 @@ return (
                 <Link className="nav-icon-link" to="/Wishlist">
                 <span className="nav-icon">
                     <i className="fas fa-heart"></i>
-                    <span class="badge-count bg-nav">{state.wishCount}</span>
+                    <span class="badge-count bg-nav">{wishState.wishCount}</span>
                 </span>
                 <span className="nav-icon-text">
                     Wishlist
