@@ -9,7 +9,7 @@ export function CartProvider({ children }) {
     const [state,dispatch]=useReducer(reducerFunction,{
         totalPrice:0,
         cartItems:([]),cartCount:0})
-    return <CartContext.Provider value={{ state,dispatch }}>
-        {children}
-    </CartContext.Provider>
+    return  <CartContext.Provider value={{ state,dispatch }}>
+                {children}
+            </CartContext.Provider>
 }
