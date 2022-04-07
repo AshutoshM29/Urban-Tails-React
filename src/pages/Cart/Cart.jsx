@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useCartContext } from "../../hooks/Cart/index";
+import { useCartContext } from "../../hooks/Cart/cart";
 import { useWishContext } from "../../hooks/Wishlist/wish-context";
 import "../Cart/cart.css"
 import "../../pages/Product/product.css"
@@ -13,9 +13,9 @@ return <div>
 
   <div className="section-cart">
     <div className="container-cart-head">
-      <Link className="path-cart" to="/Homepage">Home</Link>
+      <Link className="path-page" to="/Homepage">Home</Link>
       <small> <i className="fas fa-angle-double-right"></i> </small>
-      <Link className="path-cart" to="/Cart"> Bag</Link>
+      <Link className="path-page" to="/Cart"> Bag</Link>
     </div>
     <div className="container-cart">
       {state.cartItems.map((items) => {
@@ -33,11 +33,11 @@ return <div>
           </div>
           <label className="quantity">
             <span className="title">Quantity : </span>
-            <button className="btn-qty" onClick={()=> items.quantity <= 1 ? dispatch({ type: "removeHandler" , payload:
-                items }) : dispatch({ type: "decrementHandler" , payload: items })}><i className="fa fa-minus-circle icon"></i>
+            <button className="btn-qty" onClick={()=> items.quantity <= 1 ? dispatch({ type: "deleteItemHandler" , payload:
+                items }) : dispatch({ type: "decreaseCountHandler" , payload: items })}><i className="fa fa-minus-circle icon"></i>
             </button>
             <span className="value">{items.quantity}</span>
-            <button className="btn-qty" onClick={()=> dispatch({ type: "incrementHandler", payload: items })}><i
+            <button className="btn-qty" onClick={()=> dispatch({ type: "increaseCountHandler", payload: items })}><i
                   className="fa fa-plus-circle icon"></i></button>
           </label>
           <div className="card-horizontal-footer">
@@ -63,7 +63,7 @@ return <div>
     <div className="bag-details">
                 <h4 className="bag-head">Shopping Bag</h4>
                 <hr/>
-                <section className="bag-desc">Bag Subtotal ({items.quantity})<span className="price">₹ 20000.00</span></section>
+                <section className="bag-desc">My Bag <span className="price">{state.cartCount}</span></section>
                 <section className="bag-desc">Your Savings<span className="discount">₹ 16000.00</span></section>
                 <section className="bag-desc">Delivery Charges<span className="price">₹ 0</span></section>
                 <hr/>
