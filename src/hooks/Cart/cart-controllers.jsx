@@ -1,9 +1,9 @@
 export function reducerFunction(state, action) {
     switch (action.type) {
-        case "addToCartHandler":
+        case "addItemHandler":
          
             let productPresent = false
-            const { id, title, price, discountedPrice,img } = action.payload;
+            const { id, title, price, img, rating, initialPrice, discountedPrice } = action.payload;
             let updatedItems = state.cartItems.map((items) => {
                 if (items.id === id) {
                     productPresent = true
@@ -14,7 +14,7 @@ export function reducerFunction(state, action) {
                 }
             });
             if (!productPresent) {
-                updatedItems = [...state.cartItems, { id, title, price,img, discountedPrice, quantity: 1 }]
+                updatedItems = [...state.cartItems, { id, title, price, img, rating, initialPrice, discountedPrice, quantity: 1 }]
 
             }
             return {
@@ -22,8 +22,8 @@ export function reducerFunction(state, action) {
 
             }
 
-        case "incrementHandler":
-            let incrementedItems = state.cartItems.map((product) => {
+        case "increaseCountHandler":
+            let increasedItems = state.cartItems.map((product) => {
 
                 if (product.id === action.payload.id) {
                     return { ...product, quantity: action.payload.quantity + 1 }
@@ -31,28 +31,28 @@ export function reducerFunction(state, action) {
                 return product
             })
             return {
-                ...state, cartCount: state.cartCount + 1, cartItems: incrementedItems, totalPrice: state.totalPrice + action.payload.price
+                ...state, cartCount: state.cartCount + 1, cartItems: increasedItems, totalPrice: state.totalPrice + action.payload.price
             }
-        case "decrementHandler":
-            let decrementedItems = state.cartItems.map((product) => {
+        case "decreaseCountHandler":
+            let decreasedItems = state.cartItems.map((product) => {
                 if (product.id === action.payload.id) {
                     return { ...product, quantity: action.payload.quantity - 1 }
                 }
                 return product
             })
             return {
-                ...state, cartCount: state.cartCount - 1, cartItems: decrementedItems, totalPrice: state.totalPrice - action.payload.price
+                ...state, cartCount: state.cartCount - 1, cartItems: decreasedItems, totalPrice: state.totalPrice - action.payload.price
             }
-        case "removeHandler":
+        case "deleteItemHandler":
 
-            const removedItems = state.cartItems.filter((product) => {
+            const deletedItems = state.cartItems.filter((product) => {
                 if (product.id === action.payload.id) {
                     return product !== action.payload
                 }
                 return product
 
             })
-            return { ...state, cartCount: state.cartCount - action.payload.quantity, cartItems: removedItems, totalPrice: state.totalPrice - (action.payload.quantity * action.payload.price) }
+            return { ...state, cartCount: state.cartCount - action.payload.quantity, cartItems: deletedItems, totalPrice: state.totalPrice - (action.payload.quantity * action.payload.price) }
 
 
 
