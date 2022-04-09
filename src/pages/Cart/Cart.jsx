@@ -9,7 +9,7 @@ const { state,dispatch } = useCartContext();
 const { wishListState, wishDispatch } = useWishListContext();
 let {addToWishListMessage}=useWishListContext();
 return <div>
-  {state.cartItems.length === 0 ? <h2 className="header-cart"> Your cart is empty! :(</h2> :
+  {state.cartItems.length === 0 ? <h2 className="header-cart"> Your bag is empty! :(</h2> :
 
   <div className="section-cart">
     <div className="container-cart-head">

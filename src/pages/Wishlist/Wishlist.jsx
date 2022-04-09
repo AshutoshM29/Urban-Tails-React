@@ -8,7 +8,9 @@ export const Wishlist = () => {
 const { wishListState, wishDispatch } = useWishListContext();
 const { state, dispatch } = useCartContext();
 
-return <main className="main-wishlist">
+return <div>
+  {wishListState.wishItems.length === 0 ? <h2 className="header-cart"> Your wishlist is empty! :(</h2> :
+   <main className="main-wishlist">
   <div className="container-wishlist-head">
     <Link className="path-page" to="/Homepage">Home</Link>
     <small> <i className="fas fa-angle-double-right"></i> </small>
@@ -53,4 +55,7 @@ return <main className="main-wishlist">
     </div>
   </div>
 </main>
+}
+</div>
+
 }
