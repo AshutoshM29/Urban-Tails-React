@@ -10,9 +10,9 @@ export function wishReducerFunction(state, action) {
                 }
                 return items;
             })
-            const { id, title, img, price, discountedPrice } = action.payload
+            const { id, title, rating, initialPrice, img, price, discountedPrice } = action.payload
             if (!productInWishList) {
-                updatedWishList = [...state.wishItems, { id, title, img, price, discountedPrice }]
+                updatedWishList = [...state.wishItems, { id, title, rating, initialPrice, img, price, discountedPrice }]
                 return { ...state, wishCount: state.wishCount + 1, wishItems: updatedWishList, inWishlist: true }
             }
 
@@ -31,9 +31,9 @@ export function wishReducerFunction(state, action) {
     }
 }
 
-export function wishListHandler(product, wishState, wishDispatch) {
+export function wishListHandler(product, wishListState, wishDispatch) {
     let addToishListMessage = false;
-    wishState.wishItems.some((items) => {
+    wishListState.wishItems.some((items) => {
         if (items.id === product.id) {
             addToishListMessage = true;
             wishDispatch({ type: "remove", payload: items })
