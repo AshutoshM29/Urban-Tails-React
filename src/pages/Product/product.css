@@ -69,11 +69,11 @@ hr {
     font-size: 2rem;
     position: absolute;
     margin: 1.5rem 26.5rem;
-    color: var(--gray-mild);
+    color: var(--red-dominant);
 }
 
 .btn-wishlist:hover {
-    color: var(--red-dominant);
+    font-size: 1.8rem;
 }
 
 .section-price {
