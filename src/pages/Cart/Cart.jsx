@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../hooks/Cart/cart";
-import { useWishContext } from "../../hooks/Wishlist/wish-context";
+import { useWishListContext } from "../../context/wishlist-context";
 import "../Cart/cart.css"
 import "../../pages/Product/product.css"
 
 export const Cart = () => {
 const { state,dispatch } = useCartContext();
-const { wishState, wishDispatch } = useWishContext();
-let {addToWishListMessage}=useWishContext();
+const { wishListState, wishDispatch } = useWishListContext();
+let {addToWishListMessage}=useWishListContext();
 return <div>
   {state.cartItems.length === 0 ? <h2 className="header-cart"> Your cart is empty! :(</h2> :
 
@@ -28,7 +28,7 @@ return <div>
           <div className="price-section">
             <span className="price">₹{items.price}</span>
             <span className="initial-price">₹{items.initialPrice}</span>
-            <span className="discount">({(((items.discountedPrice / 2499 * 100)-100)*-1).toFixed(2)}%
+            <span className="discount">({Math.floor((((items.discountedPrice / items.initialPrice * 100)-100)*-1))}%
               off)</span>
           </div>
           <label className="quantity">
@@ -43,16 +43,12 @@ return <div>
           <div className="card-horizontal-footer">
             <button className="btn btn-primary-solid"
               onClick={ (()=> wishDispatch({ type: "wishlist", payload: items }))}>
-              {addToWishListMessage=wishState.wishItems.some((item) => 
+              {addToWishListMessage=wishListState.wishItems.some((item) => 
               {if (item.id === items.id) {return true;}})}
               <i className="fas fa-heart"></i>
-              {addToWishListMessage?"Wishlited":"Add to Wishlist"}
+              {addToWishListMessage?" Wishlited":" Add to Wishlist"}
             </button>
-            <button className="btn btn-secondary-outline"
-              onClick={()=> dispatch({ type: "removeHandler", payload: items})}>
-              <i className="fas fa-trash"></i>
-              Remove from Bag
-            </button>
+            <button className="btn btn-secondary-outline" onClick={() => dispatch({ type: "deleteItemHandler", payload: items })}><i className="fas fa-trash"></i> Remove from Bag</button>
           </div>
         </div>
       </div>
@@ -64,21 +60,21 @@ return <div>
                 <h4 className="bag-head">Shopping Bag</h4>
                 <hr/>
                 <section className="bag-desc">My Bag <span className="price">{state.cartCount}</span></section>
-                <section className="bag-desc">Your Savings<span className="discount">₹ 16000.00</span></section>
-                <section className="bag-desc">Delivery Charges<span className="price">₹ 0</span></section>
+                <section className="bag-desc">Your Savings<span className="discount">₹ {state.totalPrice}</span></section>
+                <section className="bag-desc">Delivery Charges<span className="price">₹ 00.00</span></section>
                 <hr/>
                 <label className="label-bag-input">
                     <span className="search-bar-btn" type="submit">
                         <i className="fas fa-tag"></i>
                     </span>
-                    <input className="bag-input" type="text" placeholder="Discount Code or Gift Card" />
+                    <input className="bag-input" type="text" placeholder=" Discount Code or Gift Card" />
                 </label>
                 <button className="btn btn-primary-outline">
                     Apply Coupon
                 </button>
                 <section className="bag-desc">
                     <p>TOTAL AMOUNT</p>
-                    <p className="price">₹ {state.totalPrice}</p>
+                    <p className="price">₹ {state.totalPrice.toFixed(2)}</p>
                 </section>
                 <hr/>
                 <p></p>
