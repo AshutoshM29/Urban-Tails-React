@@ -1,2 +1,2 @@
 export {reducerFunction} from "./cart-controllers"
-export {useCartContext} from "./cart-context"
+export {useCartContext} from "../../context/cart-context"
