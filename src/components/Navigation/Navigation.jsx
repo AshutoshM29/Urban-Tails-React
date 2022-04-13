@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom'
+import { useCartContext, useWishListContext} from "../../context/context";
+import "./navigation.css"
 import {
 pawLogo,
 } from '../../assets/images'
 
 function Navigation() {
+    const {state}=useCartContext()
+    const {wishListState}=useWishListContext();
 return (
 <nav className="nav-header nav-bar">
     <div className="nav-section">
@@ -62,6 +66,7 @@ return (
                 <Link className="nav-icon-link" to="/Wishlist">
                 <span className="nav-icon">
                     <i className="fas fa-heart"></i>
+                    <span className="badge-count bg-nav">{wishListState.wishCount}</span>
                 </span>
                 <span className="nav-icon-text">
                     Wishlist
@@ -72,6 +77,7 @@ return (
                 <Link className="nav-icon-link" to="/Cart">
                 <span className="nav-icon">
                     <i className="fas fa-shopping-bag"></i>
+                    <span className="badge-count bg-nav">{state.cartCount}</span>
                 </span>
                 <span className="nav-icon-text">
                     Bag

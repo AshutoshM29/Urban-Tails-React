@@ -1,7 +1,12 @@
 import { useSortedProduct } from "../../../hooks/Filters/filter";
+import { useCartContext } from "../../../context/cart-context";
+import { useWishListContext } from "../../../context/wishlist-context";
+import { wishListHandler } from "../../../hooks/Wishlist/wishlist-reducer";
 import "../../../pages/Product/product.css"
 export const Cards = () => {
 const { sortPriceHighLow } = useSortedProduct()
+const { dispatch } = useCartContext();
+const { wishListState, wishDispatch } = useWishListContext();
 
 return (sortPriceHighLow.length === 0) ? <div className="container-card">Oh noo!! Poduct not found, try changing filters
 </div> : <div className="container-card">
@@ -10,8 +15,15 @@ return (sortPriceHighLow.length === 0) ? <div className="container-card">Oh noo!
     <div className="card card-vertical">
         <div className="img-content">
             <p className="text-badge">{products.textBadge}</p>
-            <button className="btn-wishlist">
-                <i className="fas fa-heart"></i>
+            <button className="btn-wishlist"  onClick={() => wishListHandler(products, wishListState, wishDispatch)}>
+            {wishListState.inWishlist = wishListState.wishItems.some((item) => {
+                                if (item.id === products.id) {
+                                    return true;
+                                }
+                                return false
+                            })
+                            }
+                            <i className={wishListState.inWishlist ? "fas fa-heart" : "far fa-heart"}></i>
             </button>
             <img className="card-vertical-img" src={`${products.img}`} alt={`${products.categoryName}`} />
         </div>
@@ -26,12 +38,15 @@ return (sortPriceHighLow.length === 0) ? <div className="container-card">Oh noo!
         <div className="section-price">
             <span className="price">₹{products.price}</span>
             <span className="initial-price">₹{products.initialPrice}</span>
-            <span className="discount">₹{products.discount}</span>
+            <span className="discount">({Math.floor((((products.discountedPrice / products.initialPrice * 100)-100)*-1))}%
+              off)</span>
         </div>
-        <button className="btn btn-primary-outline">
+        <button className="btn btn-primary-outline" 
+                onClick={() =>dispatch({type:"addItemHandler",payload:products})}>
             <i className="fas fa-shopping-bag"></i> Add to Bag
         </button>
-        <button className="btn btn-primary-solid">
+        <button className="btn btn-primary-solid" 
+                onClick={() =>dispatch({type:"addItemHandler",payload:products})}>
             <i className="fas fa-bolt"></i> Buy Now
         </button>
     </div>

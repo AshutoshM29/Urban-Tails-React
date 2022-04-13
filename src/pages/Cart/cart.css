@@ -1,0 +1,124 @@
+.container-cart-head {
+    display: flex;
+    font-size: 1.6rem;
+    width: 20%;
+    position: absolute;
+    margin: 3rem 100rem 0 0 ;
+}
+
+.section-cart {
+    display: flex;
+    margin: 2rem;
+    justify-content:space-evenly;
+    min-height: 100vh;
+}
+
+.container-cart {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.bag-details {
+    padding: 1rem;
+    min-width: fit-content;
+    height: fit-content;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 0.6rem 0.2rem var(--gray-lighter);
+    position: sticky;
+    top: 20vh;
+}
+
+.header-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+}
+
+.bag-details section {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+}
+
+.bag-desc {
+    color: var(--gray-mild);
+    padding: 0.8rem;
+}
+
+.bag-details .btn {
+    border-radius: 0.5rem;
+}
+
+.label-bag-input {
+    color: var(--pink-mild);
+    border: 0.2rem solid var(--gray-lighter);
+    border-radius: 0.5rem;
+    padding: 0.6rem;
+}
+
+.bag-input {
+    border: none;
+    font-size: 1.5rem;
+    outline-style: none;
+    border-radius: 0.5rem;
+}
+
+.product.horizontal-card {
+    min-width: 20rem;
+    padding: 1rem;
+}
+
+.header-cart {
+    color: var(--gray-mild);
+}
+
+.card {
+    height: fit-content;
+}
+
+.container-cart .card-horizontal-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-horizontal-img {
+    margin-right: 2rem;
+    box-shadow: 0.2rem 0.2rem 0.6rem 0.2rem var(--gray-lighter);
+}
+
+.btn-secondary-outline:hover {
+    background-color: var(--gray-mild);
+}
+
+.quantity { 
+    color: var(--gray-light);
+    padding: 1rem 0.5rem;
+    text-align: center;
+    margin: 5rem 0.5rem;
+}
+
+.value {
+    color: var(--gray-mild);
+    border: 0.2rem solid var(--gray-lighter);
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    margin: 0 0.5rem;
+}
+
+.btn-qty {
+    background-color: transparent;
+    font-size: 2rem;
+    border: none;
+    color: var(--gray-mild);
+}
+
+.path-page {
+    color: var(--gray-light);
+    position: relative;
+    margin-top: -1.3rem;
+    padding: 1rem;
+}
