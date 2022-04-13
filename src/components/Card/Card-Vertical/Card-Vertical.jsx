@@ -1,7 +1,7 @@
 import { useSortedProduct } from "../../../hooks/Filters/filter";
 import { useCartContext } from "../../../context/cart-context";
 import { useWishListContext } from "../../../context/wishlist-context";
-import { wishListHandler } from "../../../hooks/Wishlist/wishlist-controller";
+import { wishListHandler } from "../../../hooks/Wishlist/wishlist-reducer";
 import "../../../pages/Product/product.css"
 export const Cards = () => {
 const { sortPriceHighLow } = useSortedProduct()

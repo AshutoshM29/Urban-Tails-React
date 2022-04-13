@@ -5,13 +5,6 @@ export function reducerFunction(state, action) {
             let productPresent = false
             const { id, title, price, img, rating, initialPrice, discountedPrice } = action.payload;
             let updatedItems = state.cartItems.map((items) => {
-                if (items.id === id) {
-                    productPresent = true
-                    return { ...items, quantity: items.quantity + 1 }
-                }
-                else {
-                    return items
-                }
             });
             if (!productPresent) {
                 updatedItems = [...state.cartItems, { id, title, price, img, rating, initialPrice, discountedPrice, quantity: 1 }]

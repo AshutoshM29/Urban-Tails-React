@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useCartContext } from "../../context/cart-context";
-import { useWishListContext } from "../../context/wishlist-context";
+import { useCartContext, useWishListContext} from "../../context/context";
 import "./navigation.css"
 import {
 pawLogo,
