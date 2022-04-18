@@ -10,7 +10,7 @@ function App() {
       <Navigation />
       <div className="main-style">
       <Routes>
-        <Route path="/homepage" element={<Homepage/>}></Route>
+        <Route path="*" element={<Homepage/>}></Route>
         <Route path="/product" element={<Product/>}></Route>
         <Route path="/cart" element={<Cart/>}></Route>
         <Route path="/wishlist" element={<Wishlist/>}></Route>
