@@ -1,10 +1,13 @@
+import React from 'react';
 import '../authentication.css'
 import {forget} from '../../../assets/images'
 import { Link } from 'react-router-dom'
+import { Footer, Navigation } from '../../../components';
 
 function Forget() {
 return (
 <div>
+    <Navigation />
     <main className="main-authentication">
         <section>
             <form className="form-authentication">
@@ -16,7 +19,6 @@ return (
                 <label className="label" htmlFor="mobile-no">Enter your Mobile Number</label>
                 <input className="input-outline" type="number" id='mobile-no' name="mobile-no" placeholder="0123456789"
                     required />
-
                 <div className="section-btn-authentication">
                     <button className="btn btn-primary-solid">
                         Submit
@@ -30,8 +32,8 @@ return (
         <div className="hero-login">
             <img src={forget} alt="Forgot Password" />
         </div>
-
     </main>
+    <Footer />
 </div>
 )
 }
