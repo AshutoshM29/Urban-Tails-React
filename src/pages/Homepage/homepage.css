@@ -44,6 +44,7 @@ body {
 .nav-section {
   display: flex;
   align-items: center;
+  margin-left: 2rem;
 }
 
 .nav-section-items {
@@ -107,8 +108,10 @@ input:focus {
   width: calc(100% - 2rem);
   border: none;
   background-color: transparent;
+  color: var(--gray-dominant);
   padding: 1rem 1rem;
   border-radius: 5rem;
+  margin-right: 36rem;
 }
 
 .search-bar-btn {
@@ -136,6 +139,11 @@ input:focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.btn-product {
+  background-color: transparent;
+  border: none;
 }
 
 .img-category {
