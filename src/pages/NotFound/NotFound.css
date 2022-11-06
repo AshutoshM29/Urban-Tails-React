@@ -1,0 +1,18 @@
+.container-nfound {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .heading-nfound {
+    font-size: 10rem;
+    letter-spacing: 1.2rem;
+    color: var(--pink-dominant);
+  }
+
+  .container-nfound .btn-error-solid {
+    margin: 2rem 0 0 0 ;
+    font-size: 1.5rem;
+  }
