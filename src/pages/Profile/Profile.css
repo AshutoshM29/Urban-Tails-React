@@ -1,0 +1,23 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+  }
+  
+  .container-profile {
+    border: solid 2px var(--pink-mild);
+    border-radius: 2rem;
+    display: flex;
+    width: 100%;
+    max-width: 30rem;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem;
+  }
+  
