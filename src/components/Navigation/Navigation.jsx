@@ -1,14 +1,15 @@
-import { Link } from 'react-router-dom'
-import { useCartContext, useWishListContext} from "../../context/context";
-import "./navigation.css"
-import {
-pawLogo,
-} from '../../assets/images'
+import React from 'react';
+import { Link } from "react-router-dom";
+import { useAuth, useDataLayer } from "../../context";
+import "./Navigation.css";
+import "../../pages/Homepage/Homepage.css"
+import { pawLogo, } from '../../assets/images'
 
-function Navigation() {
-    const {state}=useCartContext()
-    const {wishListState}=useWishListContext();
-return (
+const Navigation = () => {
+  const { isAuthorized } = useAuth();
+  const { setSearchTerm, searchTerm, state } = useDataLayer();
+
+ return (
 <nav className="nav-header nav-bar">
     <div className="nav-section">
         <div className="nav-section-items">
@@ -39,21 +40,22 @@ return (
             <span className="search-bar-btn" type="submit">
                 <i className="fa fa-search"></i>
             </span>
-            <input className="search-bar-input" type="text" placeholder="Type to search" name="search"></input>
+            <Link to="/Product">
+            <input
+                className="search-bar-input"
+                type="text"
+                id="search-bar"
+                placeholder="Type to search"
+                name="search"
+                onChange={(event) => setSearchTerm(event.target.value)}
+                value={searchTerm}
+            />
+            </Link>
         </label>
         <ul className="nav-icons">
+        {isAuthorized ? (
             <li className="list-inline-icons">
-                <Link className="nav-icon-link" to="/Signup">
-                <span className="nav-icon">
-                    <i className="fas fa-user-plus"></i>
-                </span>
-                <span className="nav-icon-text">
-                    Sign Up
-                </span>
-                </Link>
-            </li>
-            <li className="list-inline-icons">
-                <Link className="nav-icon-link" to="/">
+                <Link className="nav-icon-link" to="/profile">
                 <span className="nav-icon">
                     <i className="fas fa-user"></i>
                 </span>
@@ -62,11 +64,30 @@ return (
                 </span>
                 </Link>
             </li>
+        ) : (
+            <li className="list-inline-icons">
+                <Link className="nav-icon-link" to="/signup">
+                <span className="nav-icon">
+                    <i className="fas fa-user-plus"></i>
+                </span>
+                <span className="nav-icon-text">
+                    Sign Up
+                </span>
+                </Link>
+            </li>
+            )}
+            
             <li className="list-inline-icons">
                 <Link className="nav-icon-link" to="/Wishlist">
                 <span className="nav-icon">
                     <i className="fas fa-heart"></i>
-                    <span className="badge-count bg-nav">{wishListState.wishCount}</span>
+                    {state.wishlistData && state.wishlistData.length > 0 ? (
+                    <span className="badge-count bg-nav">
+                      {state.wishlistData.length}
+                    </span>
+                  ) : (
+                    ""
+                  )}
                 </span>
                 <span className="nav-icon-text">
                     Wishlist
@@ -77,7 +98,13 @@ return (
                 <Link className="nav-icon-link" to="/Cart">
                 <span className="nav-icon">
                     <i className="fas fa-shopping-bag"></i>
-                    <span className="badge-count bg-nav">{state.cartCount}</span>
+                    {state.cartData && state.cartData.length > 0 ? (
+                    <span className="badge-count bg-nav">
+                      {state.cartData.length}
+                    </span>
+                  ) : (
+                    ""
+                  )}
                 </span>
                 <span className="nav-icon-text">
                     Bag
@@ -88,6 +115,6 @@ return (
     </div>
 </nav>
 )
-}
+};
 
-export {Navigation}
+export { Navigation };
