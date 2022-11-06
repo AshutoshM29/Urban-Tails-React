@@ -13,7 +13,7 @@ const Navigation = () => {
 <nav className="nav-header nav-bar">
     <div className="nav-section">
         <div className="nav-section-items">
-            <Link to="/Homepage">
+            <Link to="/">
             <img className="nav-logo" loading="eager" src={pawLogo} alt="Logo" />
             </Link>
         </div>
