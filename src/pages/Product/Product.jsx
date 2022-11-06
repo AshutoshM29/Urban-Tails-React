@@ -1,24 +1,35 @@
-import { Sidebar } from "../../components/Sidebar/Sidebar"
-import { Cards } from "../../components/Card/Card-Vertical/Card-Vertical"
+import "./Product.css";
+import { Sidebar, VerticalCard, Footer, Navigation, } from "../../components";
+import { useDataLayer } from "../../context";
 import { Link } from 'react-router-dom'
 
+const Product = () => {
+  const { state } = useDataLayer();
 
-function Product() {
-return (
-<main className="main-product">
-  <Sidebar />
-  <div className="section-card">
-    <div className="container-card-head">
-      <Link className="path" to="/Homepage">Home</Link>
-      <small> <i className="fas fa-angle-double-right"></i> </small>
-      <Link className="path" to="/Product">Dog Treats</Link>
-      <h2>Dog Treats</h2>
-    </div>
-    <Cards />
-  </div>
+  return (
+    <>
+      <Navigation />
+      <main className="main-product">
+        <Sidebar />
+        <div>
+        <div className="section-card">
+          <div className="container-card-head">
+            <Link className="path" to="/Homepage">Home</Link>
+              <small> <i className="fas fa-angle-double-right"></i> </small>
+            <Link className="path" to="/Product">Dog Treats</Link>
+            <h2>Dog Treats</h2>
+          </div>
+        </div>
+      <div className="container-card">
+        {state.filteredData.map((product) => {
+          return <VerticalCard product={product} key={product._id} />;
+        })}
+      </div>
+      </div>
+    </main>
+    <Footer />
+    </>
+  );
+};
 
-</main>
-)
-}
-
-export {Product}
+export { Product };
