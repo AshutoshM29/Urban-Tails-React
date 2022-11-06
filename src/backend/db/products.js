@@ -1,18 +1,18 @@
-import {
-  v4 as uuid
-} from "uuid";
+import { v4 as uuid } from "uuid";
 
-import {
-  boneChew,
-  dentastix,
-  duoStick,
-  mini,
-  sara,
-  yummy
-} from "../../assets/images"
+ import {
+   boneChew,
+   dentastix,
+   duoStick,
+   mini,
+   sara,
+   yummy,
+ } from "../../assets/images"
 
-export const products = [{
+export const products = [
+  {
     _id: uuid(),
+    name: "Dogsee Chew",
     title: "Dogsee Chew",
     img: boneChew,
     productDesc: "The perfect long-lasting dog chew sticks for puppies and small breed fluffies!",
@@ -23,11 +23,11 @@ export const products = [{
     discountedPrice: 500,
     initialPrice: 599,
     categoryName: "puppy",
-    brand: "petmate"
+    brand: "petmate",
   },
-
   {
     _id: uuid(),
+    name: "Apple & Banana Biscuits",
     title: "Apple & Banana Biscuits",
     img: yummy,
     productDesc: "Made with real Apples & Bananas, free of Gluten & Artificial Flavours. Suitable for all Dogs",
@@ -40,9 +40,9 @@ export const products = [{
     categoryName: "puppy",
     brand: "purina"
   },
-
   {
     _id: uuid(),
+    name: "Duo Stick",
     title: "Duo Stick",
     img: duoStick,
     productDesc: "Made with real Apples & Bananas, free of Gluten & Artificial Flavours. Suitable for all Dogs",
@@ -55,24 +55,24 @@ export const products = [{
     categoryName: "senior",
     brand: "kong"
   },
-
   {
     _id: uuid(),
+    name: "Mini's MaM",
     title: "Mini's MaM",
     img: mini,
     productDesc: "Made with real Apples & Bananas, free of Gluten & Artificial Flavours. Suitable for all Dogs",
     textBadge: "Few Left",
     rating: "4.6 ",
     reviews: "12.3K reviews",
-    price: 899,
+    price: 99,
     discountedPrice: 100,
-    initialPrice: 999,
+    initialPrice: 299,
     categoryName: "adult",
     brand: "bayer",
   },
-
   {
     _id: uuid(),
+    name: "Sara's Jerky",
     title: "Sara's Jerky",
     img: sara,
     productDesc: "Made with real Apples & Bananas, free of Gluten & Artificial Flavours. Suitable for all Dogs",
@@ -85,9 +85,9 @@ export const products = [{
     categoryName: "adult",
     brand: "bayer",
   },
-
   {
     _id: uuid(),
+    name: "DentaStix",
     title: "DentaStix",
     img: dentastix,
     productDesc: "Made with real Apples & Bananas, free of Gluten & Artificial Flavours. Suitable for all Dogs",
