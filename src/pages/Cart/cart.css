@@ -10,12 +10,11 @@
     display: flex;
     margin: 2rem;
     justify-content:space-evenly;
-    min-height: 100vh;
+    min-height: 50vh;
 }
 
 .container-cart {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
     margin-top: 3rem;
