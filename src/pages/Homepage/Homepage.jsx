@@ -1,5 +1,9 @@
-import { Link } from 'react-router-dom'
-import '../Homepage/homepage.css'
+import React from 'react';
+import { Footer, Navigation } from "../../components";
+import { Link, useNavigate } from "react-router-dom";
+import { useDataLayer } from "../../context";
+import { useEffect } from "react";
+import './Homepage.css'
 
 import {
 heroPets,
@@ -26,9 +30,18 @@ brandRuffwear,
 } from '../../assets/images'
 import { Categories } from './Dog-Category'
 
+const Homepage = () => {
+    const currentLocation = useNavigate();
+    const { getListOfProducts } = useDataLayer();
+  
+    useEffect(() => {
+      getListOfProducts();
+    }, []);
 
-function Homepage() {
-return ( <div>
+  return (
+    <>
+      <Navigation />
+      return ( <div>
     <main>
         <h1 className="hero-txt">Purr-fect for your paws,<br />
             Every Pet's Essential<br />
@@ -48,35 +61,35 @@ return ( <div>
             <h3><span>SHOP FOR CATS</span></h3>
         </div>
         <div className="section-category">
-            <Link to="/Product">
+            <button className="btn-product" onClick={() => currentLocation("/Product")}>
             <img className="img-category" src={catClothing} alt="Clothing & Accessories" />
             <p className="desc-category">Clothing & Accessories</p>
-            </Link>
+            </button>
 
-            <Link to="/Product">
+            <button className="btn-product" onClick={() => currentLocation("/Product")}>
             <img className="img-category" src={catTreat} alt="treat" />
             <p className="desc-category">Treat</p>
-            </Link>
+            </button>
 
-            <Link to="/Product">
+            <button className="btn-product" onClick={() => currentLocation("/Product")}>
             <img className="img-category" src={catToys} alt="Toys" />
             <p className="desc-category">Toys</p>
-            </Link>
+            </button>
 
-            <Link to="/Product">
+            <button className="btn-product" onClick={() => currentLocation("/Product")}>
             <img className="img-category" src={catLitter} alt="Litter" />
             <p className="desc-category">Litter</p>
-            </Link>
+            </button>
 
-            <Link to="/Product">
+            <button className="btn-product" onClick={() => currentLocation("/Product")}>
             <img className="img-category" src={catGrooming} alt="Grooming" />
             <p className="desc-category">Grooming</p>
-            </Link>
+            </button>
 
-            <Link to="/Product">
+            <button className="btn-product" onClick={() => currentLocation("/Product")}>
             <img className="img-category" src={catBedding} alt="Bedding" />
             <p className="desc-category">Bedding</p>
-            </Link>
+            </button>
         </div>
 
 
@@ -85,17 +98,17 @@ return ( <div>
             <h3><span>SHOP FOR ESSENTIALS</span></h3>
         </div>
         <div className="section-category">
-            <Link to="/Product">
+            <button className="btn-product" onClick={() => currentLocation("/Product")}>
             <img className="img-category-ese" loading="lazy" src={essPuppy} alt="Puppy" />
-            </Link>
+            </button>
 
-            <Link to="/Product">
+            <button className="btn-product" onClick={() => currentLocation("/Product")}>
             <img className="img-category-ese" loading="lazy" src={essKitten} alt="Kitten" />
-            </Link>
+            </button>
 
-            <Link to="/Product">
+            <button className="btn-product" onClick={() => currentLocation("/Product")}>
             <img className="img-category-ese" loading="lazy" src={essSmall} alt="Small Animal" />
-            </Link>
+            </button>
         </div>
 
         <div className="section-about">
@@ -160,6 +173,9 @@ return ( <div>
 
     </main>
 </div>)
-}
+      <Footer />
+    </>
+  );
+};
 
-export {Homepage}
+export { Homepage };
