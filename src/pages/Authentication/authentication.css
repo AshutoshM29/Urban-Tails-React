@@ -23,6 +23,10 @@
     border-radius: 5px;
 }
 
+.input-pass {
+    margin-bottom: -1rem;
+}
+
 .input-outline:hover {
     border: 0.15rem solid var(--gray-dominant);
 }
@@ -127,4 +131,14 @@ input:checked+.tnc {
 .btn-primary-outline:hover {
     color: var(--white);
     background-color: var(--pink-mild);
+}
+
+.btn-eye {
+    position: relative;
+    bottom: 2rem;
+    left: 22rem;
+    width: fit-content;
+    background-color: transparent;
+    color: var(--pink-mild);
+    border: none;
 }
