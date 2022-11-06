@@ -1,5 +1,9 @@
-function Footer() {
-return (<footer className="flex-align-center">
+import React from 'react';
+import "./Footer.css";
+
+const Footer = () => {
+  return (
+  <footer>
 
     <div className="contact">
         <p><i className="icons fas fa-phone-alt"></i> +91 0123456789</p>
@@ -47,6 +51,6 @@ return (<footer className="flex-align-center">
     </ul>
     <div className="with-love">Made with ❤️ by : Ashutosh</div>
 </footer>)
-}
+};
 
-export {Footer}
+export { Footer };
