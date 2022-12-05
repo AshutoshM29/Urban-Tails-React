@@ -22,7 +22,7 @@ $ npm start
 ## Features
 - Home page
 - Product listing page
--  Product search
+- Product search
 - Filter and sort products
 - Cart Managment
 - Wishlist managment
