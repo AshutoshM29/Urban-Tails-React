@@ -22,12 +22,14 @@ $ npm start
 ## Features
 - Home page
 - Product listing page
+-  Product search
 - Filter and sort products
 - Cart Managment
 - Wishlist managment
 - Authentication
 - Payment integration
 - Order Placed page
+- Page not found
 
 ## Live Preview
 
