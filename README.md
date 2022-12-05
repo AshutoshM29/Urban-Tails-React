@@ -10,6 +10,25 @@ Urban Tails Purr-fect for your paws.
 
 You can check out [Urban Tails](https://urban-tails-react.netlify.app/) here
 
+## Run this project locally
+
+```
+$ git clone https://github.com/AshutoshM29/Urban-Tails-React.git
+$ cd Urban-Tails-React
+$ npm install
+$ npm start
+```
+
+## Features
+- Home page
+- Product listing page
+- Filter and sort products
+- Cart Managment
+- Wishlist managment
+- Authentication
+- Payment integration
+- Order Placed page
+
 ## Live Preview
 
 - [Homepage](https://urban-tails-react.netlify.app/Homepage)
