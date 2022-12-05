@@ -27,6 +27,9 @@ $ npm start
 - Cart Managment
 - Wishlist managment
 - Authentication
+- - Login
+- - Sign up
+- - Log out
 - Payment integration
 - Order Placed page
 - Page not found
