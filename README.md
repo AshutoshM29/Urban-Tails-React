@@ -41,5 +41,4 @@ $ npm start
 - [Wishlist](https://urban-tails-react.netlify.app/Wishlist)
 - [Bag](https://urban-tails-react.netlify.app/Cart)
 
-
 ***This E-commerce website is made with the help of [cleanUI](https://clean-ui.netlify.app/)***
