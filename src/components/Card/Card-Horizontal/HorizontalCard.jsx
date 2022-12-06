@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDataLayer } from "../../../context";
-import "../../../pages/Product/Product.css"
+import "../../../pages/Product/product.css"
 
 const HorizontalCard = ({ product }) => {
 const { addToWishlist, state, handleAddToCart } = useDataLayer();

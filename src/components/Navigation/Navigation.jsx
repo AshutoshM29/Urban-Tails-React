@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { useAuth, useDataLayer } from "../../context";
-import "./Navigation.css";
+import "./navigation.css";
 import "../../pages/Homepage/Homepage.css"
 import { pawLogo, } from '../../assets/images'
 

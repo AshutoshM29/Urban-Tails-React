@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect } from "react";
-import "./Sidebar.css";
+import "./sidebar.css";
 import { useDataLayer } from "../../context/index";
 
 const Sidebar = () => {

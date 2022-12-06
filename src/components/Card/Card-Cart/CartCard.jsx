@@ -3,7 +3,7 @@ import { useDataLayer, useAuth } from "../../../context";
 import { addProductToWishlist } from "../../../services";
 import { useToast } from "../../../custom-hooks/useToast";
 import { decreaseQtyService, increaseQtyService } from "../../../services/cartServices/cartServices";
-import "../../../pages/Cart/Cart.css"
+import "../../../pages/Cart/cart.css"
 
 const CartCard = ({ product }) => {
   const { handleAddToCart, state, dispatch } = useDataLayer();
