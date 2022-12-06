@@ -2,7 +2,7 @@ import React from 'react';
 import { Footer, PriceCard, CartCard, Navigation } from "../../components";
 import { useDataLayer } from "../../context";
 import { Link } from "react-router-dom";
-import "./Cart.css"
+import "./cart.css"
 
 const Cart = () => {
   const { state } = useDataLayer();
