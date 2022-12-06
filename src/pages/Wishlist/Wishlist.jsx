@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import { useDataLayer } from "../../context";
 import { Footer, HorizontalCard, Navigation } from "../../components";
-import "../Wishlist/Wishlist.css"
-import "../../pages/Product/Product.css"
+import "./wishlist.css"
+import "../Product/product.css"
 
 const Wishlist = () => {
   const { state } = useDataLayer();

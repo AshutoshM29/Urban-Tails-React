@@ -3,7 +3,7 @@ import { Footer, Navigation } from "../../components";
 import { Link, useNavigate } from "react-router-dom";
 import { useDataLayer } from "../../context";
 import { useEffect } from "react";
-import './Homepage.css'
+import './homepage.css'
 
 import {
 heroPets,

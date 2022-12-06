@@ -1,7 +1,7 @@
-import "./Product.css";
 import { Sidebar, VerticalCard, Footer, Navigation, } from "../../components";
 import { useDataLayer } from "../../context";
 import { Link } from 'react-router-dom'
+import "./product.css";
 
 const Product = () => {
   const { state } = useDataLayer();

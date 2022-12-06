@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { Footer, Navigation } from "../../components";
-import "./NotFound.css";
+import "./notFound.css";
 
 const NotFound = () => {
   return (

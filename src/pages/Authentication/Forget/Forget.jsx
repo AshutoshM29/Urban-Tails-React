@@ -1,8 +1,8 @@
 import React from 'react';
-import '../authentication.css'
 import {forget} from '../../../assets/images'
 import { Link } from 'react-router-dom'
 import { Footer, Navigation } from '../../../components';
+import '../authentication.css'
 
 function Forget() {
 return (

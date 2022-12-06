@@ -1,8 +1,8 @@
-import '../authentication.css'
 import React from 'react';
 import {logout} from '../../../assets/images'
 import { Link } from 'react-router-dom'
 import { Footer, Navigation } from '../../../components';
+import '../authentication.css'
 
 function Logout() {
 return (

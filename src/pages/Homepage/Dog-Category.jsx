@@ -3,7 +3,7 @@ import { useCategory } from "../../hooks/useCategory";
 import { useNavigate } from "react-router-dom";
 import { useDataLayer } from "../../context";
 import { useEffect } from "react";
-import "./Homepage.css"
+import "./homepage.css"
 
 
 const Categories=()=>{
