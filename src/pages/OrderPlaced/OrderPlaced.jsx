@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { orderPlaced } from "../../assets/images";
-import "./orderPlaced.css";
+import "./OrderPlaced.css";
 import { Footer, Navigation } from "../../components";
 
 const OrderPlaced = () => {

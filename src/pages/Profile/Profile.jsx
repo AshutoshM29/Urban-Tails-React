@@ -4,7 +4,7 @@ import { useToast } from "../../custom-hooks/useToast";
 import { useNavigate } from "react-router-dom";
 import { profile } from '../../assets/images'
 import { Footer, Navigation } from "../../components";
-import "./profile.css";
+import "./Profile.css";
 
 const Profile = () => {
   const { authUser, authDispatch } = useAuth();
