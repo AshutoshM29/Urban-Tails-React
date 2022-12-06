@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { useAuth, useDataLayer } from "../../context";
 import "./navigation.css";
-import "../../pages/Homepage/Homepage.css"
+import "../../pages/Homepage/homepage.css"
 import { pawLogo, } from '../../assets/images'
 
 const Navigation = () => {
